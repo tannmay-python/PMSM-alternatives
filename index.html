@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive Takshashila issue brief on electric motor alternatives to rare-earth permanent magnet machines.">
+  <meta name="theme-color" content="#fbf7ee">
+  <link rel="canonical" href="https://tannmay-python.github.io/PMSM-alternatives/">
+  <meta property="og:title" content="What replaces the permanent magnet motor?">
+  <meta property="og:description" content="A visual field guide to rare-earth-free electric motors, their losses, and their readiness.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tannmay-python.github.io/PMSM-alternatives/">
+  <meta property="og:image" content="https://tannmay-python.github.io/PMSM-alternatives/assets/takshashila-logo-light.png">
+  <title>What replaces the permanent magnet motor? | Takshashila</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Lora:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("pmsm-theme");
+        const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (dark ? "dark" : "light");
+      } catch (_) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#brief">Skip to the issue brief</a>
+  <div class="reading-progress" aria-hidden="true"></div>
+
+  <header class="site-nav">
+    <a class="brand" href="https://takshashila.org.in/" target="_blank" rel="noopener" aria-label="The Takshashila Institution">
+      <img src="assets/takshashila-logo-light.png" alt="" class="logo-light">
+      <img src="assets/takshashila-logo.png" alt="" class="logo-dark">
+    </a>
+    <nav class="nav-links" aria-label="Issue brief sections">
+      <a href="#basics">How motors work</a>
+      <a href="#field">The field</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#choice">Choose</a>
+    </nav>
+    <div class="nav-tools">
+      <span class="issue-label">Issue brief · July 2026</span>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Use dark theme" aria-pressed="false">
+        <span class="moon-icon" aria-hidden="true">◐</span>
+        <span class="sun-icon" aria-hidden="true">☼</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="brief">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit-stator">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <span class="orbit-rotor"></span>
+        </div>
+      </div>
+      <h1 id="hero-title">What replaces the permanent magnet motor?</h1>
+    </section>
+
+    <section class="opening section-shell reveal" aria-labelledby="opening-title">
+      <div class="section-number mono">01</div>
+      <div class="opening-copy">
+        <h2 id="opening-title">The answer depends on what the motor has to do.</h2>
+        <p class="dek">Permanent magnet synchronous motors became the usual choice for electric vehicles because they pack high torque and high efficiency into a small volume. Their magnets also tie a critical component to a concentrated supply chain.</p>
+        <p>No alternative wins every comparison. Wound-field motors trade magnets for rotor current. Induction motors accept rotor heat. Reluctance machines ask more of control software and acoustic design. Ferrite magnets are easier to source but weaker. The useful question is where each trade belongs.</p>
+      </div>
+      <aside class="opening-note">
+        <span class="note-kicker mono">Reading rule</span>
+        <p><strong>Peak efficiency is one point.</strong> Range, cooling, cost and reliability depend on the whole operating map.</p>
+      </aside>
+    </section>
+
+    <section class="motor-section" id="basics" aria-labelledby="motor-title">
+      <div class="section-shell section-heading reveal">
+        <div>
+          <span class="eyebrow mono">Prerequisite</span>
+          <h2 id="motor-title">A motor is a chase between two magnetic fields.</h2>
+        </div>
+        <p>The stator creates a rotating field. The rotor follows it. Motor designs differ mainly in how the rotor gets its own field, and in what that choice costs.</p>
+      </div>
+
+      <div class="motor-lab section-shell reveal">
+        <div class="lab-stage">
+          <canvas id="motorCanvas" width="860" height="660" aria-label="Animated cross-section of the selected electric motor"></canvas>
+          <div class="stage-readout">
+            <div><span class="mono">Rotor</span><strong id="rotorReadout">Permanent magnets</strong></div>
+            <div><span class="mono">Field lag</span><strong id="slipReadout">0°</strong></div>
+            <div><span class="mono">Main penalty</span><strong id="penaltyReadout">Magnet supply</strong></div>
+          </div>
+        </div>
+        <div class="lab-controls">
+          <div class="control-head">
+            <span class="mono">Motor bench</span>
+            <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="false">
+              <span class="pause-bars" aria-hidden="true"></span>
+              <span id="motionLabel">Pause</span>
+            </button>
+          </div>
+          <div class="motor-tabs" id="motorTabs" role="tablist" aria-label="Motor architecture">
+            <button role="tab" aria-selected="true" data-motor="pmsm">PMSM</button>
+            <button role="tab" aria-selected="false" data-motor="eesm">Wound field</button>
+            <button role="tab" aria-selected="false" data-motor="induction">Induction</button>
+            <button role="tab" aria-selected="false" data-motor="synrm">SynRM</button>
+            <button role="tab" aria-selected="false" data-motor="srm">SRM</button>
+          </div>
+          <div class="motor-explanation" aria-live="polite">
+            <h3 id="motorName">Permanent magnet synchronous motor</h3>
+            <p id="motorExplanation">Magnets set the rotor field before the motor draws any current. The rotor can follow the stator field without electrical slip, which keeps rotor losses low.</p>
+          </div>
+          <label class="range-control">
+            <span><b>Requested torque</b><output id="torqueOutput">54%</output></span>
+            <input id="torqueRange" type="range" min="8" max="100" value="54" step="1">
+          </label>
+          <label class="range-control">
+            <span><b>Electrical speed</b><output id="speedOutput">1,820 rpm</output></span>
+            <input id="speedRange" type="range" min="10" max="100" value="52" step="1">
+          </label>
+          <div class="loss-strip" aria-label="Illustrative loss split">
+            <div class="loss-row">
+              <span>Copper</span>
+              <div><i id="copperLossBar"></i></div>
+              <output id="copperLossValue">4.1%</output>
+            </div>
+            <div class="loss-row">
+              <span>Iron</span>
+              <div><i id="ironLossBar"></i></div>
+              <output id="ironLossValue">2.0%</output>
+            </div>
+            <div class="loss-row">
+              <span>Rotor</span>
+              <div><i id="rotorLossBar"></i></div>
+              <output id="rotorLossValue">0.4%</output>
+            </div>
+          </div>
+          <p class="model-note">Illustrative physics model. It shows how losses move with load and speed, not a test result for a commercial motor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="efficiency-section" aria-labelledby="efficiency-title">
+      <div class="section-shell section-heading reveal">
+        <div>
+          <span class="eyebrow mono">Drive-cycle view</span>
+          <h2 id="efficiency-title">Efficiency moves as the vehicle moves.</h2>
+        </div>
+        <p>A motor that is excellent at one speed can give back that advantage in traffic, on a grade or during sustained high-speed running.</p>
+      </div>
+
+      <div class="drive-lab section-shell reveal">
+        <div class="drive-visual">
+          <canvas id="driveCanvas" width="900" height="400" role="img" aria-label="Animated vehicle moving through the selected drive cycle"></canvas>
+          <div class="drive-stats">
+            <div><span class="mono">Speed</span><strong><output id="driveSpeed">42</output> km/h</strong></div>
+            <div><span class="mono">Wheel demand</span><strong><output id="drivePower">18</output> kW</strong></div>
+            <div><span class="mono">Motor efficiency</span><strong><output id="driveEfficiency">92.8</output>%</strong></div>
+          </div>
+        </div>
+        <div class="drive-controls">
+          <div class="segmented" id="cycleTabs" role="group" aria-label="Drive cycle">
+            <button class="active" data-cycle="city">City</button>
+            <button data-cycle="highway">Highway</button>
+            <button data-cycle="grade">Long grade</button>
+          </div>
+          <label class="range-control timeline-control">
+            <span><b>Move through the trip</b><output id="timeOutput">02:18</output></span>
+            <input id="timeRange" type="range" min="0" max="100" value="36" step="1">
+          </label>
+          <div class="energy-ledger">
+            <div class="energy-input">
+              <span class="mono">From battery</span>
+              <strong><output id="batteryPower">19.8</output> kW</strong>
+            </div>
+            <div class="flow-line">
+              <div class="flow-segment inverter"><span>Inverter</span><b id="inverterLoss">0.5 kW</b></div>
+              <div class="flow-segment motor"><span>Motor</span><b id="motorLoss">1.1 kW</b></div>
+              <div class="flow-segment gear"><span>Gear</span><b id="gearLoss">0.2 kW</b></div>
+            </div>
+            <div class="energy-output">
+              <span class="mono">At wheels</span>
+              <strong><output id="wheelPower">18.0</output> kW</strong>
+            </div>
+          </div>
+          <p id="cycleInterpretation">Frequent low-speed starts favour a motor and inverter that stay efficient away from their peak point.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="supply-section" aria-labelledby="supply-title">
+      <div class="supply-inner section-shell">
+        <div class="supply-copy reveal">
+          <span class="eyebrow mono">Supply concentration, 2024</span>
+          <h2 id="supply-title">The exposure grows after the ore leaves the ground.</h2>
+          <p>The International Energy Agency estimates that China accounted for 60 percent of mined magnet rare earths, 91 percent of separation and refining, and 94 percent of sintered permanent magnet production in 2024.</p>
+          <a class="source-link" href="https://www.iea.org/reports/rare-earth-elements/executive-summary" target="_blank" rel="noopener">IEA, Rare Earth Elements <span>↗</span></a>
+        </div>
+        <div class="supply-pipeline reveal" role="img" aria-label="China's estimated shares of magnet rare-earth mining, refining and sintered magnet production in 2024">
+          <div class="pipeline-stage" style="--share:60%">
+            <div class="pipeline-head"><span>Mine</span><b>60%</b></div>
+            <div class="pipeline-track"><i></i></div>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="pipeline-stage" style="--share:91%">
+            <div class="pipeline-head"><span>Separate and refine</span><b>91%</b></div>
+            <div class="pipeline-track"><i></i></div>
+          </div>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <div class="pipeline-stage" style="--share:94%">
+            <div class="pipeline-head"><span>Sinter magnets</span><b>94%</b></div>
+            <div class="pipeline-track"><i></i></div>
+          </div>
+          <p>These are shares of global output, not a measure of reserves. Capacity outside China is growing, but the IEA expects the gap to persist through 2035.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="field-section" id="field" aria-labelledby="field-title">
+      <div class="section-shell section-heading reveal">
+        <div>
+          <span class="eyebrow mono">Technology field</span>
+          <h2 id="field-title">Seven routes, with different kinds of readiness.</h2>
+        </div>
+        <p>Position on this map is a directional assessment from public evidence. Select a route to read what changes inside the motor.</p>
+      </div>
+
+      <div class="field-lab section-shell reveal">
+        <div class="field-chart-wrap">
+          <canvas id="fieldCanvas" width="760" height="600" role="img" aria-label="Selectable map of motor alternatives by maturity and traction power density"></canvas>
+          <div class="chart-legend">
+            <span><i class="legend-fill"></i> No rare-earth magnets</span>
+            <span><i class="legend-ring"></i> Uses ferrite or future magnet</span>
+          </div>
+        </div>
+        <aside class="field-detail" aria-live="polite">
+          <div class="field-index mono" id="fieldIndex">01 / 07</div>
+          <div class="field-status" id="fieldStatus">Mass production</div>
+          <h3 id="fieldName">Electrically excited synchronous motor</h3>
+          <p class="field-principle" id="fieldPrinciple">Copper windings create the rotor field. Current replaces the permanent magnet.</p>
+          <dl>
+            <div><dt>Gains</dt><dd id="fieldGain">Controllable rotor field, no rare-earth magnet, efficient coasting.</dd></div>
+            <div><dt>Pays with</dt><dd id="fieldCost">Rotor copper loss, excitation hardware and more thermal work.</dd></div>
+            <div><dt>Evidence</dt><dd id="fieldEvidence">Renault has used wound-rotor motors since the Zoe. BMW uses current-excited motors across several current EVs.</dd></div>
+          </dl>
+          <div class="field-company-row" id="fieldCompanies"></div>
+          <p class="field-source" id="fieldSource"></p>
+        </aside>
+      </div>
+
+      <div class="classification-note section-shell reveal">
+        <div>
+          <span class="mono">A useful correction</span>
+          <h3>Some labels describe geometry or implementation, not a new branch of motor physics.</h3>
+        </div>
+        <div class="classification-pairs">
+          <p><b>Axial flux</b> describes the direction of magnetic flux and the shape of the machine. It can use neodymium, ferrite or an excited rotor.</p>
+          <p><b>Virtual magnet</b> is a commercial label for an externally excited field created with coils, contactless power transfer and control software.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="evidence-section" id="evidence" aria-labelledby="evidence-title">
+      <div class="section-shell evidence-layout">
+        <div class="evidence-intro reveal">
+          <span class="eyebrow mono">Evidence ladder</span>
+          <h2 id="evidence-title">A test bench result and a production line are different facts.</h2>
+          <p>The original report brings together deployed motors, announced programmes and startup targets. They should not carry the same evidentiary weight.</p>
+          <div class="evidence-key">
+            <span><i class="deployed"></i> Deployed</span>
+            <span><i class="announced"></i> Announced</span>
+            <span><i class="development"></i> Development</span>
+          </div>
+        </div>
+        <div class="evidence-ledger reveal">
+          <article class="evidence-item deployed">
+            <div class="evidence-date mono">2012 onward</div>
+            <div><h3>Renault wound-rotor motors</h3><p>Renault says it has produced rare-earth-free wound-rotor synchronous motors since the Zoe. Current motors are made at Cléon.</p></div>
+            <span class="evidence-badge">Deployed</span>
+          </article>
+          <article class="evidence-item deployed">
+            <div class="evidence-date mono">Current fleet</div>
+            <div><h3>BMW fifth-generation eDrive</h3><p>The i4, i5, i7 and iX use current-excited synchronous motors without rare-earth magnets in the rotor.</p></div>
+            <span class="evidence-badge">Deployed</span>
+          </article>
+          <article class="evidence-item deployed">
+            <div class="evidence-date mono">Current fleet</div>
+            <div><h3>Tesla mixed architecture</h3><p>The Model 3 owner’s manual lists a permanent magnet rear motor and, on all-wheel-drive versions, an induction front motor. One vehicle can use each where it fits.</p></div>
+            <span class="evidence-badge">Deployed</span>
+          </article>
+          <article class="evidence-item deployed">
+            <div class="evidence-date mono">Industrial</div>
+            <div><h3>ABB synchronous reluctance</h3><p>ABB sells IE5 and IE6 synchronous reluctance motors from 5.5 to 400 kW. This is mature industrial equipment, even if automotive traction remains a harder packaging problem.</p></div>
+            <span class="evidence-badge">Deployed</span>
+          </article>
+          <article class="evidence-item announced">
+            <div class="evidence-date mono">Planned 2027</div>
+            <div><h3>Renault and Valeo E7A</h3><p>The partners target an 800 V wound-rotor motor up to 200 kW. Renault reports a 30 percent smaller package at equal power. Production is planned, not yet established.</p></div>
+            <span class="evidence-badge">Announced</span>
+          </article>
+          <article class="evidence-item development">
+            <div class="evidence-date mono">Development</div>
+            <div><h3>AEM switched reluctance drive</h3><p>AEM publishes a 308 kW development specification with aluminium windings and a sub-30 kg target. The figures remain company data for a motor in development.</p></div>
+            <span class="evidence-badge">Development</span>
+          </article>
+          <article class="evidence-item development">
+            <div class="evidence-date mono">Scale-up</div>
+            <div><h3>Niron iron nitride magnets</h3><p>Niron is building manufacturing capacity for rare-earth-free permanent magnets. Its announced plants matter, but volume automotive qualification still lies ahead.</p></div>
+            <span class="evidence-badge">Development</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="materials-section" aria-labelledby="materials-title">
+      <canvas id="materialsCanvas" width="1600" height="760" role="img" aria-label="Animated material flows through four rare-earth-free motor alternatives"></canvas>
+      <div class="materials-caption section-shell reveal">
+        <span class="mono">Material balance</span>
+        <h2 id="materials-title">Rare-earth-free does not mean material-free.</h2>
+        <p>Removing neodymium can increase copper, electrical steel, cooling hardware or semiconductor demand. Ferrite may need more active material or a different geometry. A credible comparison counts mass, manufacturing, repair and recycling alongside motor efficiency.</p>
+      </div>
+    </section>
+
+    <section class="choice-section" id="choice" aria-labelledby="choice-title">
+      <div class="section-shell section-heading reveal">
+        <div>
+          <span class="eyebrow mono">Decision tool</span>
+          <h2 id="choice-title">Set the duty. Watch the ranking change.</h2>
+        </div>
+        <p>This simple scorecard makes its assumptions visible. It is a first filter for discussion, not an engineering selection model.</p>
+      </div>
+      <div class="choice-lab section-shell reveal">
+        <div class="choice-inputs">
+          <fieldset>
+            <legend>Application</legend>
+            <div class="choice-pills" id="applicationChoices">
+              <button type="button" class="active" data-application="city">City car</button>
+              <button type="button" data-application="performance">Performance EV</button>
+              <button type="button" data-application="truck">Heavy truck</button>
+              <button type="button" data-application="industrial">Industrial drive</button>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>What matters most?</legend>
+            <label class="weight-control">
+              <span>Supply resilience <output id="weightSupplyOut">8</output></span>
+              <input type="range" min="1" max="10" value="8" data-weight="supply">
+            </label>
+            <label class="weight-control">
+              <span>Compactness <output id="weightDensityOut">7</output></span>
+              <input type="range" min="1" max="10" value="7" data-weight="density">
+            </label>
+            <label class="weight-control">
+              <span>Drive-cycle efficiency <output id="weightEfficiencyOut">8</output></span>
+              <input type="range" min="1" max="10" value="8" data-weight="efficiency">
+            </label>
+            <label class="weight-control">
+              <span>Commercial readiness <output id="weightMaturityOut">9</output></span>
+              <input type="range" min="1" max="10" value="9" data-weight="maturity">
+            </label>
+            <label class="weight-control">
+              <span>Quiet operation <output id="weightNoiseOut">7</output></span>
+              <input type="range" min="1" max="10" value="7" data-weight="noise">
+            </label>
+          </fieldset>
+        </div>
+        <div class="choice-results">
+          <div class="result-head">
+            <span class="mono">Directional fit</span>
+            <button type="button" id="resetChoices">Reset</button>
+          </div>
+          <ol id="rankingList" class="ranking-list" aria-live="polite"></ol>
+          <div class="choice-reading" id="choiceReading">
+            <b>For a city car,</b> wound-field and induction designs become credible when supply resilience carries real weight. PMSM stays strong when the smallest package dominates.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assessment-section" aria-labelledby="assessment-title">
+      <div class="section-shell">
+        <div class="assessment-title reveal">
+          <span class="section-number mono">02</span>
+          <h2 id="assessment-title">How to read the supplied report</h2>
+        </div>
+        <div class="assessment-grid">
+          <article class="assessment-card right reveal">
+            <span class="mono">Holds up</span>
+            <h3>The engineering field is broader than permanent magnets.</h3>
+            <p>Wound-field, reluctance, induction and ferrite designs are all serious routes. Several are already deployed. Better control electronics and cooling are improving their usable envelope.</p>
+          </article>
+          <article class="assessment-card qualify reveal">
+            <span class="mono">Needs qualification</span>
+            <h3>Most headline figures come from the companies developing the products.</h3>
+            <p>Power density, range gain, cost reduction and production dates should be read as reported claims unless an independent test or a production vehicle supports them.</p>
+          </article>
+          <article class="assessment-card missing reveal">
+            <span class="mono">Was missing</span>
+            <h3>Induction motors and industrial SynRM are important reference cases.</h3>
+            <p>Tesla uses induction alongside permanent magnets. ABB sells high-efficiency SynRM at industrial scale. Both show that the answer changes with the duty cycle and packaging constraints.</p>
+          </article>
+          <article class="assessment-card parallel reveal">
+            <span class="mono">Runs in parallel</span>
+            <h3>Substitution is one part of supply resilience.</h3>
+            <p>Recycling, lower-magnet designs, diversified refining and stockpiles can reduce exposure without removing every permanent magnet. Motor choice and material strategy should be evaluated together.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="conclusion section-shell reveal" aria-labelledby="conclusion-title">
+      <div class="conclusion-rule"></div>
+      <h2 id="conclusion-title">There will be no single post-PMSM motor.</h2>
+      <p>The likely outcome is a portfolio. Wound-field machines already serve vehicles that can accept their rotor system. Induction remains useful where robust magnet-free torque matters. Reluctance fits industrial duty and may move further into traction as control and noise improve. Ferrite and iron nitride try to keep the permanent-magnet advantages with a different material base.</p>
+      <p>The choice should follow the operating map, supply risk and evidence level. A motor that is easy to announce can still be difficult to cool, manufacture and qualify at scale.</p>
+    </section>
+
+    <section class="sources-section" aria-labelledby="sources-title">
+      <div class="section-shell">
+        <div class="sources-head reveal">
+          <h2 id="sources-title">Sources and method</h2>
+          <p>Primary and official sources were preferred. Company performance figures remain attributed to the company. The loss and ranking models are teaching aids, not measured product comparisons.</p>
+        </div>
+        <ol class="sources-list">
+          <li><a href="https://www.iea.org/reports/rare-earth-elements/executive-summary" target="_blank" rel="noopener"><span>01</span><b>International Energy Agency</b><em>Rare Earth Elements, executive summary</em></a></li>
+          <li><a href="https://www.energy.gov/cmei/vehicles/electric-motors-research-and-development" target="_blank" rel="noopener"><span>02</span><b>US Department of Energy</b><em>Electric motors research and development</em></a></li>
+          <li><a href="https://www.energy.gov/sites/prod/files/2020/06/f76/VTO_2019_APR_ELECTRIFICATION_FINAL_compliant_.pdf" target="_blank" rel="noopener"><span>03</span><b>US Department of Energy</b><em>Electric drive technologies research report</em></a></li>
+          <li><a href="https://www.renaultgroup.com/en/magazine/energy-and-motorization/all-about-electric-motors-with-no-rare-earths/" target="_blank" rel="noopener"><span>04</span><b>Renault Group</b><em>Electric motors with no rare earths</em></a></li>
+          <li><a href="https://www.press.bmwgroup.com/canada/article/attachment/T0440602EN/613412" target="_blank" rel="noopener"><span>05</span><b>BMW Group</b><em>Fifth-generation electric drive</em></a></li>
+          <li><a href="https://www.tesla.com/ownersmanual/model3/en_gb/GUID-E414862C-CFA1-4A0B-9548-BE21C32CAA58.html" target="_blank" rel="noopener"><span>06</span><b>Tesla</b><em>Model 3 motor specifications</em></a></li>
+          <li><a href="https://www.abb.com/global/en/areas/motion/motors-generators/low-voltage-motors/iec-low-voltage-motors/synchronous-reluctance-motors" target="_blank" rel="noopener"><span>07</span><b>ABB</b><em>Synchronous reluctance motors</em></a></li>
+          <li><a href="https://www.zf.com/products/de/cars/products_77186.html" target="_blank" rel="noopener"><span>08</span><b>ZF</b><em>Inductively excited synchronous motor</em></a></li>
+          <li><a href="https://newsroom.mahle.com/press/en/press-releases/perfect-motor-mahle-combines-strengths-of-its-sct-and-mct-electric-motors-99968" target="_blank" rel="noopener"><span>09</span><b>MAHLE</b><em>Contactless magnet-free traction motor</em></a></li>
+          <li><a href="https://advancedelectricmachines.com/ssrd/" target="_blank" rel="noopener"><span>10</span><b>Advanced Electric Machines</b><em>Switched reluctance development motor</em></a></li>
+          <li><a href="https://conifer.io/" target="_blank" rel="noopener"><span>11</span><b>Conifer</b><em>Ferrite axial-flux motors</em></a></li>
+          <li><a href="https://www.nironmagnetics.com/news/niron-magnetics-and-city-of-sartell-advance-next-phase-of-rare-earth-free-permanent-magnet-manufacturing-project" target="_blank" rel="noopener"><span>12</span><b>Niron Magnetics</b><em>Iron nitride manufacturing scale-up</em></a></li>
+          <li><a href="https://www.volektra.com/technology.html" target="_blank" rel="noopener"><span>13</span><b>Volektra</b><em>Externally excited “virtual magnet” technology</em></a></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="footer-brand" href="https://takshashila.org.in/" target="_blank" rel="noopener">
+        <img src="assets/takshashila-logo.png" alt="The Takshashila Institution">
+      </a>
+      <p>Independent analysis of technology, policy and strategy.</p>
+      <a href="#brief" class="back-top">Back to top ↑</a>
+    </div>
+    <div class="footer-bottom">
+      <span>Built by <a href="https://takshashila.org.in/content/team/tannmay-kumarr-baid.html" target="_blank" rel="noopener noreferrer">Tannmay Kumarr Baid</a></span>
+      <div class="socials">
+        <a href="https://x.com/tannmaybaid" target="_blank" rel="noopener noreferrer" aria-label="Tannmay Kumarr Baid on X">X</a>
+        <a href="https://www.linkedin.com/in/tannmaykumarrbaid/" target="_blank" rel="noopener noreferrer" aria-label="Tannmay Kumarr Baid on LinkedIn">in</a>
+        <a href="https://github.com/tannmay-python/PMSM-alternatives" target="_blank" rel="noopener noreferrer" aria-label="Project source on GitHub">gh</a>
+      </div>
+      <span class="footer-siblings">Related: <a href="https://tannmay-python.github.io/ai-learning-tool/">AI</a> · <a href="https://tannmay-python.github.io/blockchain-learning-tool/">Blockchain</a></span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

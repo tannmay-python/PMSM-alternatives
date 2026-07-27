@@ -18,7 +18,7 @@ Open `http://localhost:4173`.
 
 - `index.html` contains the single-page brief and source ledger.
 - `styles.css` contains the visual system and responsive states.
-- `js/app.js` controls the motor assembly, field model, architecture comparison, loss map and responsive navigation.
+- `js/app.js` controls the motor assembly, field model, architecture comparison, physical heat model and responsive navigation.
 - `assets/` contains the shared Takshashila logo and favicon.
 
 GitHub Actions publishes `main` to GitHub Pages.

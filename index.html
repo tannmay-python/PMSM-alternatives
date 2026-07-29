@@ -19,904 +19,896 @@
   <script src="js/app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#report">Skip to the report</a>
-  <div class="reading-progress" aria-hidden="true"><i></i></div>
 
-  <header class="site-nav">
-    <a class="brand" href="https://takshashila.org.in/" target="_blank" rel="noopener noreferrer" aria-label="The Takshashila Institution">
-      <img src="assets/takshashila-logo-light.svg" alt="The Takshashila Institution">
-    </a>
-    <nav class="nav-links" aria-label="Report sections">
-      <a href="#motor">How it works</a>
-      <a href="#alternatives">Alternatives</a>
-      <a href="#evidence">Evidence</a>
-      <a href="#india">India</a>
-    </nav>
-    <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-      <span></span><span></span>
-    </button>
-  </header>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile report navigation" aria-hidden="true">
+<header class="site-header">
+  <a class="site-logo" href="https://takshashila.org.in/" target="_blank" rel="noopener" aria-label="The Takshashila Institution"><img src="assets/takshashila-logo-light.svg" alt="The Takshashila Institution"></a>
+  <nav class="site-nav" aria-label="Report sections">
     <a href="#motor">How it works</a>
     <a href="#alternatives">Alternatives</a>
+    <a href="#efficiency">Efficiency</a>
     <a href="#evidence">Evidence</a>
     <a href="#india">India</a>
   </nav>
+</header>
 
-  <main id="report">
-    <section class="cover" aria-labelledby="report-title">
-      <div class="shell">
-        <h1 id="report-title">Alternatives to rare-earth permanent-magnet motors</h1>
-      </div>
-      <a class="cover-cue" href="#summary"><span>Read the brief</span><i aria-hidden="true"></i></a>
-    </section>
+<main>
 
-    <section class="brief-opening shell" id="summary" aria-labelledby="summary-title">
-      <div class="brief-meta">
-        <span>Issue brief</span>
-        <span>July 2026</span>
-        <span>Electric mobility</span>
-      </div>
-      <div class="brief-summary">
-        <p class="eyebrow">The question</p>
-        <h2 id="summary-title">Can an electric vehicle keep the performance of a permanent-magnet motor without depending on rare-earth magnets?</h2>
-        <p class="lead">Permanent-magnet synchronous motors are common in electric vehicles because they are efficient, compact and capable of producing high torque from a small package. Their rotor usually contains neodymium-iron-boron magnets. That small component gives the motor much of its performance, but it also connects the vehicle to a highly concentrated supply chain.</p>
-        <p>There is no direct substitute that preserves every advantage. Wound-field and induction motors already operate in production vehicles. Synchronous reluctance motors are established in industrial drives and are being adapted for traction. Ferrite can retain the permanent-magnet principle with lower magnetic strength. Iron nitride is promising, but remains at the manufacturing scale-up stage.</p>
-        <p>The practical choice depends on the vehicle, its duty cycle and the manufacturer’s capabilities. A larger motor may be acceptable in an industrial pump but not in a compact passenger car. Extra rotor heat may be manageable in one drive cycle and costly in another. This brief explains those trade-offs from the inside of the motor outward.</p>
-      </div>
-      <aside class="supply-callout" aria-label="Supply concentration summary">
-        <span class="callout-number">94%</span>
-        <p>China’s estimated share of sintered permanent-magnet production in 2024.</p>
-        <a href="#supply">See the supply chain</a>
-      </aside>
-    </section>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="dateline">Takshashila issue brief · July 2026</p>
+      <h1>Alternatives to rare-earth permanent-magnet motors</h1>
+      <p class="hero-standfirst">How traction motors work, where rare earths enter the machine, and which alternatives have reached commercial use.</p>
+    </div>
+  </section>
 
-    <section class="motor-primer" id="motor" aria-labelledby="motor-title">
-      <div class="reading-column">
-        <p class="eyebrow">Start with the machine</p>
-        <h2 id="motor-title">An electric motor converts timed current into rotation</h2>
-        <p class="lead">An electric vehicle stores energy as direct current in its battery. The wheels, however, need a shaft that can turn smoothly across a wide range of speeds. The traction inverter sits between those two systems. It switches the battery current into three precisely timed streams and sends them through copper windings fixed around the inside of the motor.</p>
-        <p>Those windings form the <strong>stator</strong>, the part that stays still. As current rises in one group of windings and falls in another, the strongest magnetic direction moves around the stator. The <strong>rotor</strong> sits inside that field and is fixed to the output shaft. If the rotor has its own magnetic poles, induced current, or a shape that magnetic flux prefers, it turns to follow the moving field. Bearings support the shaft, the air gap keeps moving and stationary parts apart, and the cooling system carries away the heat that the conversion creates.</p>
-      </div>
+  <section id="summary" class="wrap summary">
+    <div class="summary-meta">
+      <span>Issue brief</span>
+      <span>July 2026</span>
+      <span>Electric mobility</span>
+    </div>
+    <div>
+      <p class="section-kicker">The question</p>
+      <h2 class="section-h2">Can an electric vehicle keep the performance of a permanent-magnet motor without depending on rare-earth magnets?</h2>
+      <p class="section-lede">Permanent-magnet synchronous motors are common in electric vehicles because they are efficient, compact and capable of producing high torque from a small package. Their rotor usually contains neodymium-iron-boron magnets. That small component gives the motor much of its performance, but it also connects the vehicle to a highly concentrated supply chain.</p>
+      <p class="section-body">There is no direct substitute that preserves every advantage. Wound-field and induction motors already operate in production vehicles. Synchronous reluctance motors are established in industrial drives and are being adapted for traction. Ferrite can retain the permanent-magnet principle with lower magnetic strength. Iron nitride is promising, but remains at the manufacturing scale-up stage.</p>
+      <p class="section-body last">The practical choice depends on the vehicle, its duty cycle and the manufacturer's capabilities. A larger motor may be acceptable in an industrial pump but not in a compact passenger car. Extra rotor heat may be manageable in one drive cycle and costly in another. This brief explains those trade-offs from the inside of the motor outward.</p>
+    </div>
+    <aside class="summary-aside" aria-label="Supply concentration summary">
+      <span class="stat-numeral">94%</span>
+      <p>China's estimated share of sintered permanent-magnet production in 2024.</p>
+      <a href="#supply">See the supply chain</a>
+    </aside>
+  </section>
 
-      <div class="energy-path shell" aria-label="Energy path through an electric powertrain">
-        <div class="energy-node">
-          <span class="energy-icon battery-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+  <section id="motor" class="section section--card">
+    <div class="prose">
+      <p class="section-kicker">Start with the machine</p>
+      <h2 class="section-h2">An electric motor converts timed current into rotation</h2>
+      <p class="section-lede section-lede--21">An electric vehicle stores energy as direct current in its battery. The wheels, however, need a shaft that can turn smoothly across a wide range of speeds. The traction inverter sits between those two systems. It switches the battery current into three precisely timed streams and sends them through copper windings fixed around the inside of the motor.</p>
+      <p class="section-body last">Those windings form the <strong>stator</strong>, the part that stays still. As current rises in one group of windings and falls in another, the strongest magnetic direction moves around the stator. The <strong>rotor</strong> sits inside that field and is fixed to the output shaft. If the rotor has its own magnetic poles, induced current, or a shape that magnetic flux prefers, it turns to follow the moving field. Bearings support the shaft, the air gap keeps moving and stationary parts apart, and the cooling system carries away the heat that the conversion creates.</p>
+    </div>
+
+    <div class="wrap chain-wrap">
+      <div class="chain">
+        <div class="chain-cell">
+          <p class="chain-label">E.01 · Source</p>
           <strong>Battery</strong>
-          <p>Stores direct current</p>
+          <p class="chain-note">Stores direct current</p>
         </div>
-        <div class="energy-link"><i></i><span>DC electricity</span></div>
-        <div class="energy-node">
-          <span class="energy-icon inverter-icon" aria-hidden="true"><i></i></span>
+        <div class="chain-cell">
+          <p class="chain-label">E.02 · DC electricity</p>
           <strong>Inverter</strong>
-          <p>Times three currents</p>
+          <p class="chain-note">Times three currents</p>
         </div>
-        <div class="energy-link three-phase"><i></i><span>Phases A, B and C</span></div>
-        <div class="energy-node">
-          <span class="energy-icon motor-icon" aria-hidden="true"><i></i></span>
+        <div class="chain-cell">
+          <p class="chain-label">E.03 · Phases A, B, C</p>
           <strong>Motor</strong>
-          <p>Produces shaft torque</p>
+          <p class="chain-note">Produces shaft torque</p>
         </div>
-        <div class="energy-link"><i></i><span>Rotation</span></div>
-        <div class="energy-node">
-          <span class="energy-icon wheel-icon" aria-hidden="true"><i></i></span>
+        <div class="chain-cell">
+          <p class="chain-label">E.04 · Rotation</p>
           <strong>Wheels</strong>
-          <p>Move the vehicle</p>
+          <p class="chain-note">Move the vehicle</p>
         </div>
       </div>
-    </section>
+      <div class="chain-track" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
 
-    <section class="assembly-story" aria-labelledby="assembly-title">
-      <div class="assembly-grid shell">
-        <div class="assembly-visual">
-          <div class="assembly-frame" id="assemblyFrame" data-stage="0">
-            <div class="visual-topline">
-              <span>Traction motor, exploded side cutaway</span>
-              <span id="assemblyCount">1 / 7</span>
-            </div>
-            <svg id="assemblySvg" viewBox="0 0 1080 680" role="img" aria-labelledby="assembly-title assembly-desc">
-              <title id="assembly-title">The parts of a permanent-magnet synchronous motor</title>
-              <desc id="assembly-desc">Seven steps assemble the housing, bearings, shaft, stator steel, copper windings, rotor and permanent magnets, then energise the motor.</desc>
+  <section class="section section--band">
+    <div class="wrap">
+      <div class="lab-intro">
+        <div>
+          <p class="section-kicker">Interactive · L.01</p>
+          <h2 class="section-h2 section-h2--lab">Assemble the machine, one part at a time</h2>
+        </div>
+        <p class="lab-intro-note">Seven parts, added in the order an engineer would fit them. The last step energises the stator so the assembled machine turns.</p>
+      </div>
+
+      <figure class="lab" id="lab-assembly">
+        <div class="lab-grid">
+          <div class="lab-tabs lab-tabs--7">
+            <button class="lab-tab lab-tab--mono is-current" type="button" data-step="0">M.01</button>
+            <button class="lab-tab lab-tab--mono" type="button" data-step="1">M.02</button>
+            <button class="lab-tab lab-tab--mono" type="button" data-step="2">M.03</button>
+            <button class="lab-tab lab-tab--mono" type="button" data-step="3">M.04</button>
+            <button class="lab-tab lab-tab--mono" type="button" data-step="4">M.05</button>
+            <button class="lab-tab lab-tab--mono" type="button" data-step="5">M.06</button>
+            <button class="lab-tab lab-tab--mono" type="button" data-step="6">M.07</button>
+          </div>
+          <div class="lab-status">Exploded side cutaway ·&nbsp;<span data-stage-count>1 / 7</span></div>
+
+          <div class="lab-stage lab-stage--pad">
+            <svg class="assembly-svg" viewBox="0 0 1000 520" role="img" aria-label="The parts of a permanent-magnet synchronous motor">
               <defs>
-                <linearGradient id="housingFace" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#f4f0e9"/>
-                  <stop offset="1" stop-color="#ded8cf"/>
-                </linearGradient>
-                <pattern id="steelLines" width="10" height="10" patternUnits="userSpaceOnUse">
-                  <path d="M0 1H10" stroke="#99928a" stroke-width="1"/>
+                <pattern id="pmsmSteel" width="9" height="9" patternUnits="userSpaceOnUse">
+                  <rect width="9" height="9" fill="#d8d1c8"></rect>
+                  <path d="M0 1H9" stroke="#a49c93" stroke-width="1"></path>
                 </pattern>
-                <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
-                  <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#3b172c" flood-opacity=".12"/>
-                </filter>
-                <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-                  <path d="M0 0L8 4L0 8Z" fill="#d58a18"/>
-                </marker>
+                <marker id="pmsmArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#d58a18"></path></marker>
               </defs>
+              <line x1="90" y1="470" x2="910" y2="470" stroke="#e0d8ce" stroke-width="2"></line>
 
-              <g class="assembly-ground" aria-hidden="true">
-                <line x1="88" y1="568" x2="997" y2="568"/>
+              <g class="part" data-part="inv">
+                <rect x="60" y="34" width="164" height="78" rx="12" fill="#fffdf9" stroke="#4b1734" stroke-width="3"></rect>
+                <text x="142" y="66" text-anchor="middle" fill="#4b1734" class="svg-mono-11">TRACTION</text>
+                <text x="142" y="86" text-anchor="middle" fill="#4b1734" class="svg-mono-11">INVERTER</text>
+                <path d="M142 112V150H300" fill="none" stroke="#d58a18" stroke-width="3" stroke-dasharray="7 6"></path>
               </g>
 
-              <g class="part housing" data-part="housing">
-                <path d="M160 196H838L906 252V484L838 540H160L92 484V252Z" fill="url(#housingFace)" stroke="#4b1734" stroke-width="5" filter="url(#softShadow)"/>
-                <path d="M191 231H807L864 275V461L807 505H191L134 461V275Z" fill="#fbf8f2" stroke="#c9c1b7" stroke-width="3"/>
-                <path d="M92 307H55V429H92M906 307H943V429H906" fill="#d5cec5" stroke="#4b1734" stroke-width="4"/>
-                <g class="cooling-paths" fill="none" stroke="#70a3a2" stroke-width="7" stroke-linecap="round">
-                  <path d="M212 214H785"/>
-                  <path d="M212 522H785"/>
+              <g class="part" data-part="housing">
+                <path d="M190 96H810L866 148V372L810 424H190L134 372V148Z" fill="#f4f0e9" stroke="#4b1734" stroke-width="4"></path>
+                <path d="M216 124H784L836 164V356L784 396H216L164 356V164Z" fill="#fbf8f2" stroke="#c9c1b7" stroke-width="2"></path>
+                <path d="M134 210H104V310H134M866 210H896V310H866" fill="#d5cec5" stroke="#4b1734" stroke-width="3"></path>
+                <g class="part-fade" data-part="cooling" opacity="0.35">
+                  <path d="M236 110H764" fill="none" stroke="#70a3a2" stroke-width="6" stroke-linecap="round"></path>
+                  <path d="M236 410H764" fill="none" stroke="#70a3a2" stroke-width="6" stroke-linecap="round"></path>
                 </g>
               </g>
 
-              <g class="part bearing bearing-left" data-part="bearings">
-                <circle cx="169" cy="368" r="56" fill="#fff" stroke="#827b73" stroke-width="18"/>
-                <circle cx="169" cy="368" r="31" fill="#ddd7cf" stroke="#4d4945" stroke-width="3"/>
-              </g>
-              <g class="part bearing bearing-right" data-part="bearings">
-                <circle cx="829" cy="368" r="56" fill="#fff" stroke="#827b73" stroke-width="18"/>
-                <circle cx="829" cy="368" r="31" fill="#ddd7cf" stroke="#4d4945" stroke-width="3"/>
+              <g class="part" data-part="shaft">
+                <rect x="40" y="245" width="920" height="30" rx="15" fill="#57534f"></rect>
+                <rect x="52" y="251" width="896" height="6" rx="3" fill="#a7a19a"></rect>
               </g>
 
-              <g class="part shaft" data-part="shaft">
-                <rect x="24" y="347" width="974" height="42" rx="21" fill="#57534f"/>
-                <rect x="38" y="354" width="946" height="8" rx="4" fill="#a7a19a"/>
-                <path d="M981 347h45l22 21-22 21h-45Z" fill="#3f3b38"/>
+              <g class="part" data-part="bearL">
+                <circle cx="176" cy="260" r="44" fill="#fffdf9" stroke="#827b73" stroke-width="14"></circle>
+                <circle cx="176" cy="260" r="24" fill="#ddd7cf" stroke="#4d4945" stroke-width="2"></circle>
+              </g>
+              <g class="part" data-part="bearR">
+                <circle cx="824" cy="260" r="44" fill="#fffdf9" stroke="#827b73" stroke-width="14"></circle>
+                <circle cx="824" cy="260" r="24" fill="#ddd7cf" stroke="#4d4945" stroke-width="2"></circle>
               </g>
 
-              <g class="part stator" data-part="stator">
-                <rect x="251" y="247" width="496" height="242" rx="22" fill="url(#steelLines)" stroke="#514c47" stroke-width="5"/>
-                <rect x="294" y="287" width="410" height="162" rx="81" fill="#fbf8f2" stroke="#514c47" stroke-width="5"/>
+              <g class="part" data-part="stator">
+                <rect x="280" y="140" width="440" height="240" rx="16" fill="url(#pmsmSteel)" stroke="#514c47" stroke-width="4"></rect>
+                <rect x="316" y="180" width="368" height="160" rx="80" fill="#fbf8f2" stroke="#514c47" stroke-width="4"></rect>
                 <g fill="#514c47">
-                  <path d="M297 292h48v24h-48zM297 420h48v24h-48z"/>
-                  <path d="M653 292h48v24h-48zM653 420h48v24h-48z"/>
-                  <path d="M394 284h44v34h-44zM560 284h44v34h-44z"/>
-                  <path d="M394 418h44v34h-44zM560 418h44v34h-44z"/>
+                  <rect x="320" y="184" width="42" height="20"></rect><rect x="320" y="316" width="42" height="20"></rect>
+                  <rect x="638" y="184" width="42" height="20"></rect><rect x="638" y="316" width="42" height="20"></rect>
+                  <rect x="410" y="178" width="40" height="30"></rect><rect x="550" y="178" width="40" height="30"></rect>
+                  <rect x="410" y="312" width="40" height="30"></rect><rect x="550" y="312" width="40" height="30"></rect>
                 </g>
               </g>
 
-              <g class="part windings" data-part="windings" fill="none" stroke-linecap="round">
-                <path class="phase-a-stroke" d="M315 302C252 326 252 410 315 434M683 302C746 326 746 410 683 434" stroke-width="16"/>
-                <path class="phase-b-stroke" d="M403 305C367 237 631 237 595 305M403 431C367 499 631 499 595 431" stroke-width="15"/>
-                <path class="phase-c-stroke" d="M350 291C300 219 698 219 648 291M350 445C300 517 698 517 648 445" stroke-width="8" opacity=".78"/>
-                <path class="phase-wire" d="M350 222H195V125H105" stroke="#b86718" stroke-width="7"/>
+              <g class="part" data-part="wind" fill="none" stroke-linecap="round">
+                <path d="M336 196C286 216 286 304 336 324M664 196C714 216 714 304 664 324" stroke="#620d3c" stroke-width="14"></path>
+                <path d="M418 198C386 146 614 146 582 198M418 322C386 374 614 374 582 322" stroke="#d58a18" stroke-width="13"></path>
+                <path d="M374 188C332 132 668 132 626 188M374 332C332 388 668 388 626 332" stroke="#70a3a2" stroke-width="8" opacity=".85"></path>
               </g>
 
-              <g class="part rotor" data-part="rotor">
-                <rect x="340" y="306" width="318" height="124" rx="62" fill="url(#steelLines)" stroke="#3f3b38" stroke-width="5"/>
-                <rect x="371" y="329" width="256" height="78" rx="39" fill="#d2ccc4"/>
-                <circle cx="499" cy="368" r="37" fill="#fbf8f2" stroke="#57534f" stroke-width="5"/>
+              <g class="part" data-part="rotor">
+                <rect x="348" y="200" width="304" height="120" rx="60" fill="url(#pmsmSteel)" stroke="#3f3b38" stroke-width="4"></rect>
+                <rect x="378" y="222" width="244" height="76" rx="38" fill="#d2ccc4"></rect>
+                <circle cx="500" cy="260" r="34" fill="#fbf8f2" stroke="#57534f" stroke-width="4"></circle>
               </g>
 
-              <g class="part magnets" data-part="magnets">
-                <path d="M392 328H459L444 360H376Z" fill="#6f0d43"/>
-                <path d="M539 328H606L622 360H554Z" fill="#e09a27"/>
-                <path d="M376 376H444L459 408H392Z" fill="#e09a27"/>
-                <path d="M554 376H622L606 408H539Z" fill="#6f0d43"/>
-                <text x="418" y="351" text-anchor="middle">N</text>
-                <text x="580" y="351" text-anchor="middle" class="dark-text">S</text>
-                <text x="418" y="399" text-anchor="middle" class="dark-text">S</text>
-                <text x="580" y="399" text-anchor="middle">N</text>
+              <g class="part" data-part="mag">
+                <path d="M396 222H460L446 250H382Z" fill="#620d3c"></path>
+                <path d="M540 222H604L618 250H554Z" fill="#e09a27"></path>
+                <path d="M382 270H446L460 298H396Z" fill="#e09a27"></path>
+                <path d="M554 270H618L604 298H540Z" fill="#620d3c"></path>
+                <text x="421" y="243" text-anchor="middle" fill="#fffdf9" class="svg-pole">N</text>
+                <text x="579" y="243" text-anchor="middle" fill="#593814" class="svg-pole">S</text>
+                <text x="421" y="291" text-anchor="middle" fill="#593814" class="svg-pole">S</text>
+                <text x="579" y="291" text-anchor="middle" fill="#fffdf9" class="svg-pole">N</text>
               </g>
 
-              <g class="part inverter" data-part="inverter">
-                <rect x="76" y="62" width="178" height="98" rx="16" fill="#fff" stroke="#4b1734" stroke-width="3"/>
-                <text x="165" y="98" text-anchor="middle">TRACTION</text>
-                <text x="165" y="121" text-anchor="middle">INVERTER</text>
-                <path d="M111 140q18-28 36 0t36 0t36 0" fill="none" stroke="#d58a18" stroke-width="4"/>
-              </g>
-
-              <g class="field-motion" aria-hidden="true">
-                <path d="M327 368A172 79 0 0 1 671 368" fill="none" stroke="#d58a18" stroke-width="5" stroke-dasharray="12 11" marker-end="url(#arrowGold)"/>
-                <path d="M671 368A172 79 0 0 1 327 368" fill="none" stroke="#6f0d43" stroke-width="5" stroke-dasharray="12 11"/>
-              </g>
-
-              <g class="assembly-callout" id="assemblyCallout">
-                <path id="assemblyCalloutLine" d="M165 178V212H212"/>
-                <circle id="assemblyCalloutDot" cx="212" cy="212" r="5"/>
-                <text id="assemblyCalloutText" x="165" y="164">Housing and cooling jacket</text>
+              <g class="part-fade" data-part="field" opacity="0">
+                <path class="flux-dash" d="M352 260A148 62 0 0 1 648 260" fill="none" stroke="#d58a18" stroke-width="4" stroke-dasharray="11 10" marker-end="url(#pmsmArrow)"></path>
+                <path class="flux-dash" d="M648 260A148 62 0 0 1 352 260" fill="none" stroke="#620d3c" stroke-width="4" stroke-dasharray="11 10"></path>
               </g>
             </svg>
-            <div class="end-inset" aria-label="End view of the motor">
-              <span>End view</span>
+          </div>
+
+          <div class="lab-rail">
+            <p class="rail-kicker" data-step-kicker>M.01 · Structure</p>
+            <h3 class="rail-title" data-step-title>Housing and cooling jacket</h3>
+            <p class="rail-body" data-step-body>The housing bolts into the vehicle and keeps the motor aligned. Channels in or around it carry coolant past the stator, where much of the heat is produced.</p>
+            <div class="rail-actions">
+              <button class="btn btn--ghost" type="button" data-step-prev>Previous</button>
+              <button class="btn btn--primary" type="button" data-step-next>Next part</button>
+            </div>
+            <div class="rail-endview">
+              <p class="rail-kicker">End view</p>
               <svg viewBox="0 0 180 180" aria-hidden="true">
-                <circle cx="90" cy="90" r="75" fill="#eee8df" stroke="#4b1734" stroke-width="4"/>
-                <circle cx="90" cy="90" r="53" fill="#fbf8f2" stroke="#706a64" stroke-width="3"/>
-                <circle cx="90" cy="90" r="38" fill="#d0c9c0" stroke="#3f3b38" stroke-width="3"/>
-                <path d="M70 54l19 10-12 22-19-10zm40 0l12 22-19 10-12-22zM58 104l19-10 12 22-19 10zm45-10l19 10-12 22-19-10z" fill="#6f0d43"/>
-                <circle cx="90" cy="90" r="13" fill="#fff" stroke="#57534f" stroke-width="3"/>
+                <circle cx="90" cy="90" r="76" fill="#eee8df" stroke="#4b1734" stroke-width="3"></circle>
+                <circle cx="90" cy="90" r="54" fill="#fbf8f2" stroke="#706a64" stroke-width="2"></circle>
+                <circle cx="90" cy="90" r="38" fill="#d0c9c0" stroke="#3f3b38" stroke-width="2"></circle>
+                <path class="part-fade" data-part="magEnd" opacity="0" d="M72 58l16 9-10 19-16-9zm36 0l10 19-16 9-10-19zM60 104l16-9 10 19-16 9zm40-9l16 9-10 19-16-9z" fill="#620d3c"></path>
+                <circle cx="90" cy="90" r="13" fill="#fffdf9" stroke="#57534f" stroke-width="2"></circle>
               </svg>
             </div>
-            <div class="assembly-nav" aria-label="Motor assembly controls">
-              <button id="assemblyPrev" type="button">Previous</button>
-              <button id="assemblyNext" type="button">Next part</button>
+          </div>
+
+          <div class="lab-note">Explanatory diagram · geometry simplified, not to scale</div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section--card">
+    <div class="prose">
+      <p class="section-kicker">From current to torque</p>
+      <h2 class="section-h2">Three timed currents create one rotating magnetic direction</h2>
+      <p class="section-body">A single energised coil pair would pull a magnetic rotor towards one fixed direction. That is not enough for continuous rotation. A traction inverter therefore supplies three phase currents separated in time. When phase A is strongest, the stator field points mainly along phase A. As A weakens and B strengthens, the combined field moves between them. Phase C continues the sequence. Repeating the cycle makes the magnetic direction travel around the stator without moving any stator part.</p>
+      <p class="section-body last">In a PMSM, the rotor's embedded magnets provide a second magnetic direction. With no mechanical load, the two directions are nearly aligned. When the shaft must produce torque, the rotor direction trails the stator field by a small angle. They continue to rotate at the same speed. The controller regulates that separation while also limiting current and temperature.</p>
+    </div>
+
+    <div class="wrap lab-wrap">
+      <figure class="lab" id="lab-field">
+        <div class="lab-grid">
+          <div class="lab-tabs lab-tabs--5">
+            <button class="lab-tab lab-tab--titled is-current" type="button" data-field="0"><span class="lab-tab-sub">F.01</span>One phase</button>
+            <button class="lab-tab lab-tab--titled" type="button" data-field="1"><span class="lab-tab-sub">F.02</span>Phase handoff</button>
+            <button class="lab-tab lab-tab--titled" type="button" data-field="2"><span class="lab-tab-sub">F.03</span>Combined field</button>
+            <button class="lab-tab lab-tab--titled" type="button" data-field="3"><span class="lab-tab-sub">F.04</span>Add the rotor</button>
+            <button class="lab-tab lab-tab--titled" type="button" data-field="4"><span class="lab-tab-sub">F.05</span>Apply load</button>
+          </div>
+          <div class="lab-status lab-status--tall">Live model ·&nbsp;<span data-field-step-label>Step 1 of 5</span></div>
+
+          <div class="lab-stage lab-stage--column">
+            <div class="stage-head">
+              <h3 data-field-title>Phase A magnetises one pair of stator poles</h3>
+              <p data-field-copy>Positive current in one side of the winding and return current in the opposite side create a north-south magnetic axis across the motor.</p>
+            </div>
+            <div class="stage-art stage-art--field">
+              <svg viewBox="0 0 480 480" role="img" aria-label="How three-phase current creates a rotating field">
+                <circle cx="240" cy="240" r="212" fill="#f0ebe4" stroke="#403b37" stroke-width="4"></circle>
+                <circle cx="240" cy="240" r="142" fill="#fffdf9" stroke="#8a837b" stroke-width="2"></circle>
+                <g transform="rotate(0 240 240)"><rect data-coil="a" x="216" y="42" width="48" height="56" rx="8" fill="#620d3c" stroke="#716a63" stroke-width="2"></rect></g>
+                <g transform="rotate(60 240 240)"><rect data-coil="b" x="216" y="42" width="48" height="56" rx="8" fill="#cdc5bb" stroke="#716a63" stroke-width="2"></rect></g>
+                <g transform="rotate(120 240 240)"><rect data-coil="c" x="216" y="42" width="48" height="56" rx="8" fill="#cdc5bb" stroke="#716a63" stroke-width="2"></rect></g>
+                <g transform="rotate(180 240 240)"><rect data-coil="a" x="216" y="42" width="48" height="56" rx="8" fill="#cdc5bb" stroke="#716a63" stroke-width="2"></rect></g>
+                <g transform="rotate(240 240 240)"><rect data-coil="b" x="216" y="42" width="48" height="56" rx="8" fill="#cdc5bb" stroke="#716a63" stroke-width="2"></rect></g>
+                <g transform="rotate(300 240 240)"><rect data-coil="c" x="216" y="42" width="48" height="56" rx="8" fill="#cdc5bb" stroke="#716a63" stroke-width="2"></rect></g>
+
+                <g class="fade-220" data-field-flux transform="rotate(0 240 240)" opacity="0">
+                  <line x1="240" y1="240" x2="376" y2="240" stroke="#d58a18" stroke-width="6" stroke-linecap="round"></line>
+                  <path d="M394 240l-22-13v26z" fill="#d58a18"></path>
+                </g>
+
+                <g class="fade-260" data-field-rotor transform="rotate(0 240 240)" opacity="0">
+                  <circle cx="240" cy="240" r="104" fill="#ddd7cf" stroke="#494540" stroke-width="4"></circle>
+                  <path d="M155 216A90 90 0 0 1 325 216L282 240H198Z" fill="#620d3c"></path>
+                  <path d="M155 264A90 90 0 0 0 325 264L282 240H198Z" fill="#e09a27"></path>
+                  <text data-rotor-label data-cx="240" data-cy="204" x="240" y="204" text-anchor="middle" fill="#fffdf9" class="svg-pole-lg">N</text>
+                  <text data-rotor-label data-cx="240" data-cy="288" x="240" y="288" text-anchor="middle" fill="#5a3918" class="svg-pole-lg">S</text>
+                  <line x1="240" y1="240" x2="336" y2="240" stroke="#620d3c" stroke-width="5" stroke-linecap="round"></line>
+                  <path d="M350 240l-18-11v22z" fill="#620d3c"></path>
+                </g>
+                <path data-torque d="" fill="none" stroke="#56504a" stroke-width="3" stroke-dasharray="6 5"></path>
+                <text data-torque-label x="240" y="240" fill="#4f4944" opacity="0" class="svg-delta">δ</text>
+                <circle cx="240" cy="240" r="9" fill="#3f3b38"></circle>
+              </svg>
+            </div>
+            <div class="lab-legend">
+              <span><i style="background:#620d3c"></i>Phase A</span>
+              <span><i style="background:#d58a18"></i>Phase B</span>
+              <span><i style="background:#70a3a2"></i>Phase C</span>
+              <span><i style="background:#d58a18"></i>Combined field</span>
+              <span><i style="background:#4b1734"></i>Rotor field</span>
             </div>
           </div>
-        </div>
 
-        <ol class="assembly-steps">
-          <li class="assembly-step is-active" data-stage="0">
-            <button type="button">
-              <span>Structure</span>
-              <strong>Housing and cooling jacket</strong>
-            </button>
-            <p>The housing bolts into the vehicle and keeps the motor aligned. Channels in or around it carry coolant past the stator, where much of the heat is produced.</p>
-          </li>
-          <li class="assembly-step" data-stage="1">
-            <button type="button">
-              <span>Support</span>
-              <strong>Bearings and shaft</strong>
-            </button>
-            <p>Two bearings hold the shaft on a precise axis while allowing it to turn. The rotor is fixed to the shaft, so electromagnetic torque leaves the motor as mechanical rotation.</p>
-          </li>
-          <li class="assembly-step" data-stage="2">
-            <button type="button">
-              <span>Magnetic path</span>
-              <strong>Laminated stator steel</strong>
-            </button>
-            <p>The stator is built from thin sheets of electrical steel. Steel guides magnetic flux. Splitting the core into insulated laminations limits circulating currents that would otherwise become heat.</p>
-          </li>
-          <li class="assembly-step" data-stage="3">
-            <button type="button">
-              <span>Electrical input</span>
-              <strong>Three groups of copper windings</strong>
-            </button>
-            <p>The inverter does not send one steady current into the motor. It varies current through phases A, B and C in sequence. Each phase magnetises a different set of stator teeth.</p>
-          </li>
-          <li class="assembly-step" data-stage="4">
-            <button type="button">
-              <span>Moving core</span>
-              <strong>Rotor and air gap</strong>
-            </button>
-            <p>The rotor turns inside the stator. A very narrow air gap prevents contact while allowing magnetic flux to cross. A larger gap weakens magnetic coupling; a smaller one demands tighter manufacturing tolerances.</p>
-          </li>
-          <li class="assembly-step" data-stage="5">
-            <button type="button">
-              <span>Supply exposure</span>
-              <strong>Permanent magnets inside the rotor</strong>
-            </button>
-            <p>In an interior PMSM, shaped NdFeB magnets sit in pockets within the rotor steel. They create a strong rotor field without wires or current on the rotor. This helps the motor remain compact and limits rotor heating.</p>
-          </li>
-          <li class="assembly-step" data-stage="6">
-            <button type="button">
-              <span>Operation</span>
-              <strong>The assembled machine</strong>
-            </button>
-            <p>The inverter energises the stator, its field turns, and the magnetised rotor turns with it. The cooling jacket removes losses while the shaft carries useful torque to the gearbox or wheels.</p>
-          </li>
-        </ol>
+          <div class="lab-rail lab-rail--card">
+            <p class="rail-kicker">Instantaneous phase current</p>
+            <div class="phase-rows">
+              <div class="data-row">
+                <span>A</span>
+                <div class="data-bar"><i data-bar="a" style="background:#620d3c"></i><b></b></div>
+                <output data-val="a">1.00</output>
+              </div>
+              <div class="data-row">
+                <span>B</span>
+                <div class="data-bar"><i data-bar="b" style="background:#d58a18"></i><b></b></div>
+                <output data-val="b">−0.50</output>
+              </div>
+              <div class="data-row">
+                <span>C</span>
+                <div class="data-bar"><i data-bar="c" style="background:#70a3a2"></i><b></b></div>
+                <output data-val="c">−0.50</output>
+              </div>
+            </div>
+
+            <label class="ctl">
+              <span class="ctl-label">Electrical angle <output data-angle-out>0°</output></span>
+              <input data-angle-range type="range" min="0" max="360" step="1" value="0">
+            </label>
+            <label class="ctl ctl--tight" data-load-control hidden>
+              <span class="ctl-label">Shaft load <output data-load-out>30%</output></span>
+              <input data-load-range type="range" min="0" max="100" step="1" value="30">
+            </label>
+            <div class="rail-actions rail-actions--plain">
+              <button class="btn btn--primary" type="button" data-field-play>Play cycle</button>
+              <button class="btn btn--ghost" type="button" data-field-advance>Advance 30°</button>
+            </div>
+            <div class="note">
+              <p class="note-kicker">What to watch</p>
+              <p class="note-body" data-field-watch>The phase A coil pair is strongest. Its opposite sides form the current path across the stator.</p>
+            </div>
+          </div>
+
+          <div class="lab-note">Live computation · phase currents are cos(θ) at 120° separation</div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="supply" class="section section--supply">
+    <div class="wrap supply-grid">
+      <div>
+        <p class="section-kicker section-kicker--gold">Rare-earth supply concentration</p>
+        <h2 class="section-h2 section-h2--dark">A small rotor component connects the vehicle to a concentrated supply chain</h2>
+        <p class="dark-body">NdFeB magnets combine high magnetic strength with a high resistance to demagnetisation. Neodymium and praseodymium are central to that performance. Some grades intended for high temperatures also contain dysprosium or terbium, although the quantity varies by design and manufacturing process.</p>
+        <p class="dark-body last">Mining is only the first stage. Ore must be separated into individual rare-earth products, refined, converted into metal and alloy, milled into powder, pressed, sintered and machined into a finished magnet. The International Energy Agency estimates that China's share rises markedly after mining.<sup class="fn"><a class="fn-gold" href="#source-1">1</a></sup></p>
       </div>
-    </section>
-
-    <section class="field-section" aria-labelledby="field-title">
-      <div class="reading-column">
-        <p class="eyebrow">From current to torque</p>
-        <h2 id="field-title">Three timed currents create one rotating magnetic direction</h2>
-        <p>A single energised coil pair would pull a magnetic rotor towards one fixed direction. That is not enough for continuous rotation. A traction inverter therefore supplies three phase currents separated in time. When phase A is strongest, the stator field points mainly along phase A. As A weakens and B strengthens, the combined field moves between them. Phase C continues the sequence. Repeating the cycle makes the magnetic direction travel around the stator without moving any stator part.</p>
-        <p>In a PMSM, the rotor’s embedded magnets provide a second magnetic direction. With no mechanical load, the two directions are nearly aligned. When the shaft must produce torque, the rotor direction trails the stator field by a small angle. They continue to rotate at the same speed. The controller regulates that separation while also limiting current and temperature.</p>
-      </div>
-
-      <div class="field-workbench shell" id="fieldWorkbench">
-        <div class="field-lesson">
-          <div class="lesson-tabs" role="tablist" aria-label="Rotating field explanation">
-            <button role="tab" aria-selected="true" data-field-step="0">1. One phase</button>
-            <button role="tab" aria-selected="false" data-field-step="1">2. Phase handoff</button>
-            <button role="tab" aria-selected="false" data-field-step="2">3. Combined field</button>
-            <button role="tab" aria-selected="false" data-field-step="3">4. Add the rotor</button>
-            <button role="tab" aria-selected="false" data-field-step="4">5. Apply load</button>
-          </div>
-          <div class="field-explanation" aria-live="polite">
-            <span id="fieldStepLabel">Step 1 of 5</span>
-            <h3 id="fieldStepTitle">Phase A magnetises one pair of stator poles</h3>
-            <p id="fieldStepCopy">Positive current in one side of the winding and return current in the opposite side create a north-south magnetic axis across the motor.</p>
-          </div>
-        </div>
-
-        <div class="field-stage">
-          <div class="field-fixed-legend">
-            <span><i class="a"></i>Phase A</span>
-            <span><i class="b"></i>Phase B</span>
-            <span><i class="c"></i>Phase C</span>
-            <span><i class="axis"></i>Combined stator field</span>
-            <span><i class="rotor-key"></i>Rotor field</span>
-          </div>
-          <svg id="fieldSvg" viewBox="0 0 760 680" role="img" aria-labelledby="fieldSvgTitle fieldSvgDesc">
-            <title id="fieldSvgTitle">How three-phase current creates a rotating field</title>
-            <desc id="fieldSvgDesc">Six stator coils, three current meters and a permanent-magnet rotor respond to the electrical angle and load controls.</desc>
-            <defs>
-              <filter id="fieldGlow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="11"/>
-              </filter>
-            </defs>
-            <g class="field-stator">
-              <circle cx="380" cy="338" r="272" fill="#f0ebe4" stroke="#403b37" stroke-width="5"/>
-              <circle cx="380" cy="338" r="183" fill="#fffdf9" stroke="#8a837b" stroke-width="3"/>
-              <g class="field-coils">
-                <g class="field-coil phase-a" data-phase="a" transform="rotate(0 380 338)"><path d="M344 77h72v77h-72z"/></g>
-                <g class="field-coil phase-b" data-phase="b" transform="rotate(60 380 338)"><path d="M344 77h72v77h-72z"/></g>
-                <g class="field-coil phase-c" data-phase="c" transform="rotate(120 380 338)"><path d="M344 77h72v77h-72z"/></g>
-                <g class="field-coil phase-a" data-phase="a" transform="rotate(180 380 338)"><path d="M344 77h72v77h-72z"/></g>
-                <g class="field-coil phase-b" data-phase="b" transform="rotate(240 380 338)"><path d="M344 77h72v77h-72z"/></g>
-                <g class="field-coil phase-c" data-phase="c" transform="rotate(300 380 338)"><path d="M344 77h72v77h-72z"/></g>
-              </g>
-            </g>
-            <g id="fieldFlux" class="field-flux" aria-hidden="true">
-              <ellipse cx="380" cy="338" rx="168" ry="68" fill="none" stroke="#d58a18" stroke-width="26" opacity=".13" filter="url(#fieldGlow)"/>
-              <line x1="220" y1="338" x2="540" y2="338"/>
-              <path d="M548 338l-22-13v26z"/>
-            </g>
-            <g id="fieldRotor" class="field-rotor">
-              <circle cx="380" cy="338" r="132" fill="#ddd7cf" stroke="#494540" stroke-width="5"/>
-              <path d="M274 310A113 113 0 0 1 486 310L428 338H332Z" fill="#6f0d43"/>
-              <path d="M274 366A113 113 0 0 0 486 366L428 338H332Z" fill="#e09a27"/>
-              <text x="380" y="291" text-anchor="middle">N</text>
-              <text x="380" y="397" text-anchor="middle" class="dark-text">S</text>
-              <line x1="380" y1="338" x2="518" y2="338"/>
-              <path d="M528 338l-20-12v24z"/>
-            </g>
-            <path id="torqueArc" class="torque-arc" d=""/>
-            <text id="torqueLabel" x="380" y="338">δ</text>
-            <circle cx="380" cy="338" r="10" fill="#3f3b38"/>
-          </svg>
-        </div>
-
-        <div class="field-controls">
-          <div class="phase-panel" aria-label="Instantaneous phase currents">
-            <div class="phase-row">
-              <span>A</span><div><i id="phaseABar"></i><b></b></div><output id="phaseAValue">1.00</output>
-            </div>
-            <div class="phase-row">
-              <span>B</span><div><i id="phaseBBar"></i><b></b></div><output id="phaseBValue">−0.50</output>
-            </div>
-            <div class="phase-row">
-              <span>C</span><div><i id="phaseCBar"></i><b></b></div><output id="phaseCValue">−0.50</output>
-            </div>
-          </div>
-          <label class="range-control">
-            <span>Electrical angle <output id="angleOutput">0°</output></span>
-            <input id="angleRange" type="range" min="0" max="360" value="0" step="1">
-          </label>
-          <label class="range-control load-control">
-            <span>Shaft load <output id="loadOutput">30%</output></span>
-            <input id="loadRange" type="range" min="0" max="100" value="30" step="1">
-          </label>
-          <div class="control-row">
-            <button class="primary-control" id="fieldPlay" type="button">Play cycle</button>
-            <button id="fieldStep" type="button">Advance 30°</button>
-          </div>
-          <div class="field-readout">
-            <span>What to watch</span>
-            <p id="fieldWatch">The phase A coil pair is strongest. Its opposite sides form the current path across the stator.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="supply-section" id="supply" aria-labelledby="supply-title">
-      <div class="shell supply-layout">
-        <div class="supply-copy">
-          <p class="eyebrow">Rare-earth supply concentration</p>
-          <h2 id="supply-title">A small rotor component connects the vehicle to a concentrated supply chain</h2>
-          <p>NdFeB magnets combine high magnetic strength with a high resistance to demagnetisation. Neodymium and praseodymium are central to that performance. Some grades intended for high temperatures also contain dysprosium or terbium, although the quantity varies by design and manufacturing process.</p>
-          <p>Mining is only the first stage. Ore must be separated into individual rare-earth products, refined, converted into metal and alloy, milled into powder, pressed, sintered and machined into a finished magnet. The International Energy Agency estimates that China’s share rises markedly after mining.<sup><a href="#source-1">1</a></sup></p>
-        </div>
-        <div class="supply-chain" role="img" aria-label="China's estimated shares of magnet rare-earth mining, separation and refining, and sintered magnet production in 2024">
-          <div class="supply-stage">
-            <span class="supply-value">60%</span>
-            <div class="supply-track"><i style="--share:.60"></i></div>
+      <div>
+        <div class="supply-stats">
+          <div class="supply-cell">
+            <p class="dark-label">S.01</p>
+            <span class="supply-numeral">60%</span>
+            <div class="supply-bar"><i style="width:60%"></i></div>
             <strong>Mining</strong>
-            <p>Magnet rare-earth output</p>
+            <p class="dark-note">Magnet rare-earth output</p>
           </div>
-          <div class="supply-connector" aria-hidden="true"><i></i></div>
-          <div class="supply-stage">
-            <span class="supply-value">91%</span>
-            <div class="supply-track"><i style="--share:.91"></i></div>
+          <div class="supply-cell">
+            <p class="dark-label">S.02</p>
+            <span class="supply-numeral">91%</span>
+            <div class="supply-bar"><i style="width:91%"></i></div>
             <strong>Separation and refining</strong>
-            <p>Separated oxides and metals</p>
+            <p class="dark-note">Separated oxides and metals</p>
           </div>
-          <div class="supply-connector" aria-hidden="true"><i></i></div>
-          <div class="supply-stage">
-            <span class="supply-value">94%</span>
-            <div class="supply-track"><i style="--share:.94"></i></div>
+          <div class="supply-cell">
+            <p class="dark-label">S.03</p>
+            <span class="supply-numeral">94%</span>
+            <div class="supply-bar"><i style="width:94%"></i></div>
             <strong>Sintered magnets</strong>
-            <p>Finished high-performance magnets</p>
+            <p class="dark-note">Finished high-performance magnets</p>
           </div>
-          <p class="source-note">IEA, 2025. Shares refer to 2024 output, not reserves.</p>
         </div>
+        <p class="supply-provenance">IEA, 2025 · shares refer to 2024 output, not reserves</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="taxonomy-section" aria-labelledby="taxonomy-title">
-      <div class="reading-column">
-        <p class="eyebrow">Three design choices</p>
-        <h2 id="taxonomy-title">Motor principle, magnet material and geometry answer different questions</h2>
-        <p>Commercial descriptions often mix these categories. A wound-field motor changes how the rotor field is created. Ferrite changes the material used in a permanent magnet. Axial flux changes the direction in which magnetic flux crosses the air gap. An engineer can combine choices from more than one row.</p>
-      </div>
-      <div class="taxonomy-board shell">
-        <div class="taxonomy-row">
-          <span>How torque is produced</span>
-          <div><b>Permanent magnet</b><b>Wound field</b><b>Induction</b><b>Synchronous reluctance</b><b>Switched reluctance</b></div>
-        </div>
-        <div class="taxonomy-row">
-          <span>If a magnet is used</span>
-          <div><b>NdFeB</b><b>Ferrite</b><b>Iron nitride</b></div>
-        </div>
-        <div class="taxonomy-row">
-          <span>How the machine is arranged</span>
-          <div><b>Radial flux</b><b>Axial flux</b></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="architecture-section" id="alternatives" aria-labelledby="alternatives-title">
-      <div class="reading-column">
-        <p class="eyebrow">Motor architectures</p>
-        <h2 id="alternatives-title">Four established motor principles can remove rare-earth magnets</h2>
-        <p>The stator, rotor, inverter and cooling system are designed as one machine, so the comparison below is intentionally simplified. Holding the outer motor size steady makes the internal difference easier to see. Select a route and run it slowly. The moving current, field or active pole shows what pulls the rotor around.</p>
-      </div>
-
-      <div class="architecture-workbench shell" id="architectureWorkbench">
-        <div class="architecture-tabs" role="tablist" aria-label="Motor architecture">
-          <button role="tab" aria-selected="true" data-architecture="pmsm"><span>Reference</span>PMSM</button>
-          <button role="tab" aria-selected="false" data-architecture="wound"><span>Supplied field</span>Wound field</button>
-          <button role="tab" aria-selected="false" data-architecture="induction"><span>Induced field</span>Induction</button>
-          <button role="tab" aria-selected="false" data-architecture="synrm"><span>Preferred path</span>SynRM</button>
-          <button role="tab" aria-selected="false" data-architecture="srm"><span>Switched poles</span>SRM</button>
-        </div>
-
-        <div class="architecture-visual">
-          <div class="visual-topline">
-            <span id="architecturePrinciple">Permanent field in the rotor</span>
-            <button id="architecturePlay" type="button">Pause motion</button>
+  <section class="section section--paper">
+    <div class="prose">
+      <p class="section-kicker">Three design choices</p>
+      <h2 class="section-h2 section-h2--minor">Motor principle, magnet material and geometry answer different questions</h2>
+      <p class="section-body last">Commercial descriptions often mix these categories. A wound-field motor changes how the rotor field is created. Ferrite changes the material used in a permanent magnet. Axial flux changes the direction in which magnetic flux crosses the air gap. An engineer can combine choices from more than one row.</p>
+    </div>
+    <div class="wrap block-wrap">
+      <div class="choice-table">
+        <div class="choice-row">
+          <span class="choice-label">T.01 · How torque is produced</span>
+          <div class="chips">
+            <b>Permanent magnet</b>
+            <b>Wound field</b>
+            <b>Induction</b>
+            <b>Synchronous reluctance</b>
+            <b>Switched reluctance</b>
           </div>
-          <svg id="architectureSvg" viewBox="0 0 820 720" role="img" aria-labelledby="architectureSvgTitle architectureSvgDesc">
-            <title id="architectureSvgTitle">Animated comparison of traction motor architectures</title>
-            <desc id="architectureSvgDesc">The shared stator surrounds five selectable rotor designs. Each design shows the current or magnetic action that produces torque.</desc>
-            <defs>
-              <filter id="archGlow" x="-60%" y="-60%" width="220%" height="220%">
-                <feGaussianBlur stdDeviation="15"/>
-              </filter>
-              <marker id="smallArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-                <path d="M0 0L7 3.5L0 7Z" fill="#d58a18"/>
-              </marker>
-            </defs>
-
-            <g id="archStator" class="arch-stator">
-              <circle cx="410" cy="350" r="278" fill="#eee9e2" stroke="#403b37" stroke-width="5"/>
-              <circle cx="410" cy="350" r="190" fill="#fffdf9" stroke="#8d867e" stroke-width="3"/>
-              <g class="arch-coils">
-                <rect x="376" y="82" width="68" height="78" rx="15"/>
-                <rect x="376" y="540" width="68" height="78" rx="15"/>
-                <rect x="583" y="185" width="68" height="78" rx="15" transform="rotate(60 617 224)"/>
-                <rect x="169" y="437" width="68" height="78" rx="15" transform="rotate(60 203 476)"/>
-                <rect x="583" y="437" width="68" height="78" rx="15" transform="rotate(-60 617 476)"/>
-                <rect x="169" y="185" width="68" height="78" rx="15" transform="rotate(-60 203 224)"/>
-              </g>
-              <g id="activePoleGlow" aria-hidden="true">
-                <ellipse cx="410" cy="350" rx="250" ry="82" fill="none" stroke="#d58a18" stroke-width="30" opacity=".12" filter="url(#archGlow)"/>
-                <line x1="204" y1="350" x2="616" y2="350" marker-end="url(#smallArrow)"/>
-              </g>
-            </g>
-
-            <g class="arch-rotor is-active" data-rotor="pmsm">
-              <circle cx="410" cy="350" r="152" fill="#d6d0c8" stroke="#45403c" stroke-width="5"/>
-              <path d="M300 270A139 139 0 0 1 376 205L393 296L345 323Z" fill="#6f0d43"/>
-              <path d="M520 270A139 139 0 0 0 444 205L427 296L475 323Z" fill="#e09a27"/>
-              <path d="M300 430A139 139 0 0 0 376 495L393 404L345 377Z" fill="#e09a27"/>
-              <path d="M520 430A139 139 0 0 1 444 495L427 404L475 377Z" fill="#6f0d43"/>
-              <circle cx="410" cy="350" r="47" fill="#fff" stroke="#5c5752" stroke-width="5"/>
-            </g>
-
-            <g class="arch-rotor" data-rotor="wound">
-              <circle cx="410" cy="350" r="152" fill="#d6d0c8" stroke="#45403c" stroke-width="5"/>
-              <path d="M330 260C278 302 278 398 330 440M490 260C542 302 542 398 490 440" fill="none" stroke="#b96619" stroke-width="24"/>
-              <path d="M360 241V459M460 241V459" fill="none" stroke="#6f0d43" stroke-width="14"/>
-              <circle cx="410" cy="350" r="47" fill="#fff" stroke="#5c5752" stroke-width="5"/>
-              <g class="excitation-unit">
-                <circle cx="410" cy="555" r="20" fill="#fff" stroke="#6f0d43" stroke-width="4"/>
-                <circle cx="410" cy="555" r="33" fill="none" stroke="#d58a18" stroke-width="4"/>
-                <path d="M410 521V495" stroke="#6f0d43" stroke-width="4"/>
-              </g>
-              <g class="rotor-current" aria-hidden="true">
-                <circle cx="330" cy="280" r="7"/><circle cx="490" cy="420" r="7"/>
-              </g>
-            </g>
-
-            <g class="arch-rotor" data-rotor="induction">
-              <circle cx="410" cy="350" r="152" fill="#bbb4ab" stroke="#45403c" stroke-width="5"/>
-              <circle cx="410" cy="350" r="123" fill="#e3ddd5" stroke="#8b5a20" stroke-width="12"/>
-              <g class="cage-bars" fill="#b96619">
-                <circle cx="410" cy="227" r="10"/><circle cx="472" cy="243" r="10"/><circle cx="517" cy="288" r="10"/>
-                <circle cx="533" cy="350" r="10"/><circle cx="517" cy="412" r="10"/><circle cx="472" cy="457" r="10"/>
-                <circle cx="410" cy="473" r="10"/><circle cx="348" cy="457" r="10"/><circle cx="303" cy="412" r="10"/>
-                <circle cx="287" cy="350" r="10"/><circle cx="303" cy="288" r="10"/><circle cx="348" cy="243" r="10"/>
-              </g>
-              <circle cx="410" cy="350" r="47" fill="#fff" stroke="#5c5752" stroke-width="5"/>
-              <g class="induced-current" aria-hidden="true">
-                <circle cx="410" cy="227" r="15"/><circle cx="517" cy="412" r="15"/><circle cx="303" cy="412" r="15"/>
-              </g>
-            </g>
-
-            <g class="arch-rotor" data-rotor="synrm">
-              <circle cx="410" cy="350" r="152" fill="#d2ccc4" stroke="#45403c" stroke-width="5"/>
-              <g fill="none" stroke="#fffdf9" stroke-width="20" stroke-linecap="round">
-                <path d="M321 272C366 296 454 296 499 272"/>
-                <path d="M303 316C360 342 460 342 517 316"/>
-                <path d="M303 384C360 358 460 358 517 384"/>
-                <path d="M321 428C366 404 454 404 499 428"/>
-              </g>
-              <circle cx="410" cy="350" r="47" fill="#fff" stroke="#5c5752" stroke-width="5"/>
-              <g class="reluctance-flux" fill="none" stroke="#70a3a2" stroke-width="5" aria-hidden="true">
-                <path d="M284 350C340 310 480 310 536 350"/>
-                <path d="M284 350C340 390 480 390 536 350"/>
-              </g>
-            </g>
-
-            <g class="arch-rotor" data-rotor="srm">
-              <path d="M352 202H468V292H558V408H468V498H352V408H262V292H352Z" fill="#aaa39b" stroke="#45403c" stroke-width="5"/>
-              <circle cx="410" cy="350" r="47" fill="#fff" stroke="#5c5752" stroke-width="5"/>
-            </g>
-
-            <g class="motion-readouts">
-              <g transform="translate(70 636)">
-                <text x="0" y="0">STATOR FIELD</text>
-                <rect x="0" y="15" width="130" height="6" rx="3"/>
-                <circle id="fieldSpeedDot" cx="8" cy="18" r="8"/>
-              </g>
-              <g transform="translate(246 636)">
-                <text x="0" y="0">ROTOR</text>
-                <rect x="0" y="15" width="130" height="6" rx="3"/>
-                <circle id="rotorSpeedDot" cx="8" cy="18" r="8"/>
-              </g>
-              <g transform="translate(422 636)">
-                <text x="0" y="0">RELATION</text>
-                <text id="architectureRelation" x="0" y="25" class="relation-value">Same speed</text>
-              </g>
-            </g>
-          </svg>
         </div>
-
-        <article class="architecture-copy" id="architecturePanel" tabindex="0" aria-live="polite">
-          <span class="architecture-kicker" id="architectureKicker">Reference architecture</span>
-          <h3 id="architectureName">Permanent-magnet synchronous motor</h3>
-          <p id="architectureDescription">The rotor contains permanent magnetic poles. The rotating stator field pulls those poles around at exactly the same speed. Because the rotor needs no electrical connection and produces little electrical loss, the machine can be compact and efficient.</p>
-          <div class="architecture-facts">
-            <div>
-              <span>What replaces the rare-earth magnet?</span>
-              <p id="architectureReplacement">Nothing in the reference machine. NdFeB magnets create the rotor field.</p>
-            </div>
-            <div>
-              <span>Where does added heat appear?</span>
-              <p id="architectureHeat">Mostly in stator copper and steel. Field weakening can add stator current at high speed.</p>
-            </div>
-            <div>
-              <span>What has been demonstrated?</span>
-              <p id="architectureEvidence">Broad use in current electric vehicles.</p>
-            </div>
+        <div class="choice-row">
+          <span class="choice-label">T.02 · If a magnet is used</span>
+          <div class="chips">
+            <b>NdFeB</b>
+            <b>Ferrite</b>
+            <b>Iron nitride</b>
           </div>
-          <div class="architecture-watch">
-            <span>Watch the model</span>
-            <p id="architectureWatch">The permanent poles rotate in step with the stator field. The small angular separation represents load.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="magnet-section" aria-labelledby="magnet-title">
-      <div class="shell magnet-layout">
-        <div class="magnet-copy">
-          <p class="eyebrow">Magnet materials</p>
-          <h2 id="magnet-title">A weaker or emerging magnet can preserve the PMSM principle</h2>
-          <p>Ferrite magnets contain no rare earths and are already made at large scale. Their lower magnetic energy usually requires more magnet material, stronger flux concentration, a larger motor, or some combination of these changes. Iron-nitride magnets may eventually offer stronger performance without rare earths, but a useful traction magnet must meet several requirements at once: magnetic strength, coercivity, temperature stability, repeatable manufacture and cost.</p>
-          <p>Axial flux does not constitute a separate magnet material. It is a machine geometry that can help an engineer use space and active material differently. It can still use NdFeB, ferrite or another magnet.</p>
         </div>
-        <div class="magnet-comparison">
-          <div class="magnet-header"><span>Material</span><span>What it changes</span><span>Status</span></div>
-          <div class="magnet-row">
-            <strong>NdFeB</strong>
-            <p>High magnetic energy supports compact rotors and high torque density.</p>
-            <span class="evidence-chip deployed">Mass production</span>
-          </div>
-          <div class="magnet-row">
-            <strong>Ferrite</strong>
-            <p>Lower strength shifts the design towards more volume, flux concentration or lower output.</p>
-            <span class="evidence-chip commercial">Mature material</span>
-          </div>
-          <div class="magnet-row">
-            <strong>Iron nitride</strong>
-            <p>Promising laboratory properties still need repeatable magnets and automotive qualification.</p>
-            <span class="evidence-chip development">Scale-up</span><sup><a href="#source-10">10</a></sup>
+        <div class="choice-row">
+          <span class="choice-label">T.03 · How the machine is arranged</span>
+          <div class="chips">
+            <b>Radial flux</b>
+            <b>Axial flux</b>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="loss-section" id="efficiency" aria-labelledby="loss-title">
-      <div class="reading-column">
-        <p class="eyebrow">Operating efficiency</p>
-        <h2 id="loss-title">Motor losses depend on speed and torque demand</h2>
-        <p>Motor efficiency is the share of electrical input that reaches the shaft as mechanical output. The remainder becomes heat, sound and mechanical friction. A quoted peak efficiency describes one favourable operating point. A vehicle repeatedly moves through low speed, high torque, steady cruise, high speed and regenerative braking, so engineers study an efficiency map and the expected drive cycle.</p>
-        <p>Torque usually requires current. Heating in copper rises roughly with the square of current, so a hard launch or a long climb can warm the stator quickly. High speed raises electrical frequency and therefore iron loss. An induction rotor adds heat because current flows through its cage. A wound-field rotor adds excitation loss. A PMSM may need extra stator current to weaken its effective field at high speed.</p>
-      </div>
+  <section id="alternatives" class="section section--card">
+    <div class="prose">
+      <p class="section-kicker">Motor architectures · L.03</p>
+      <h2 class="section-h2">Four established motor principles can remove rare-earth magnets</h2>
+      <p class="section-body last">The stator, rotor, inverter and cooling system are designed as one machine, so the comparison below is intentionally simplified. Holding the outer motor size steady makes the internal difference easier to see. Select a route and watch what pulls the rotor around: a permanent pole, a supplied current, an induced current, or a preferred magnetic path.</p>
+    </div>
 
-      <div class="loss-workbench shell">
-        <div class="loss-presets" role="group" aria-label="Driving condition">
-          <button type="button" class="is-active" data-duty="launch"><span>Pulling away</span><small>Low speed, high torque</small></button>
-          <button type="button" data-duty="cruise"><span>Steady cruise</span><small>Medium speed, low torque</small></button>
-          <button type="button" data-duty="motorway"><span>Motorway</span><small>High speed, low torque</small></button>
-          <button type="button" data-duty="grade"><span>Long climb</span><small>Medium speed, high torque</small></button>
-        </div>
-
-        <div class="loss-machine">
-          <div class="visual-topline">
-            <span>Explanatory heat view</span>
-            <span id="dutyLabel">Pulling away</span>
+    <div class="wrap lab-wrap">
+      <figure class="lab" id="lab-arch">
+        <div class="lab-grid">
+          <div class="lab-tabs lab-tabs--5">
+            <button class="lab-tab lab-tab--titled lab-tab--over is-current" type="button" data-arch="pmsm"><span class="lab-tab-sub">Reference</span>PMSM</button>
+            <button class="lab-tab lab-tab--titled lab-tab--over" type="button" data-arch="wound"><span class="lab-tab-sub">Supplied field</span>Wound field</button>
+            <button class="lab-tab lab-tab--titled lab-tab--over" type="button" data-arch="induction"><span class="lab-tab-sub">Induced field</span>Induction</button>
+            <button class="lab-tab lab-tab--titled lab-tab--over" type="button" data-arch="synrm"><span class="lab-tab-sub">Preferred path</span>SynRM</button>
+            <button class="lab-tab lab-tab--titled lab-tab--over" type="button" data-arch="srm"><span class="lab-tab-sub">Switched poles</span>SRM</button>
           </div>
-          <svg id="lossSvg" viewBox="0 0 760 600" role="img" aria-labelledby="lossSvgTitle lossSvgDesc">
-            <title id="lossSvgTitle">Where an electric motor produces heat</title>
-            <desc id="lossSvgDesc">Heat overlays appear on stator copper, electrical steel, rotor and excitation hardware as speed, torque and motor architecture change.</desc>
-            <defs>
-              <filter id="heatBlur" x="-70%" y="-70%" width="240%" height="240%">
-                <feGaussianBlur stdDeviation="18"/>
-              </filter>
-            </defs>
-            <g class="loss-motor">
-              <circle cx="350" cy="300" r="235" fill="#ede8e1" stroke="#403b37" stroke-width="5"/>
-              <circle cx="350" cy="300" r="160" fill="#fffdf9" stroke="#8b847c" stroke-width="3"/>
-              <g class="loss-coils">
-                <rect x="320" y="76" width="60" height="67" rx="14"/>
-                <rect x="320" y="457" width="60" height="67" rx="14"/>
-                <rect x="491" y="161" width="60" height="67" rx="14" transform="rotate(60 521 195)"/>
-                <rect x="149" y="372" width="60" height="67" rx="14" transform="rotate(60 179 406)"/>
-                <rect x="491" y="372" width="60" height="67" rx="14" transform="rotate(-60 521 406)"/>
-                <rect x="149" y="161" width="60" height="67" rx="14" transform="rotate(-60 179 195)"/>
-              </g>
-              <g class="loss-rotor">
-                <circle cx="350" cy="300" r="132" fill="#d1cbc3" stroke="#47423e" stroke-width="5"/>
-                <g class="loss-rotor-option is-active" data-loss-rotor="pmsm">
-                  <path d="M250 265A112 112 0 0 1 450 265L397 300H303Z" fill="#6f0d43"/>
-                  <path d="M250 335A112 112 0 0 0 450 335L397 300H303Z" fill="#e09a27"/>
+          <div class="lab-status lab-status--tall lab-status--split">
+            <span data-arch-principle>Permanent field in the rotor</span>
+            <button class="btn btn--small" type="button" data-arch-play>Pause motion</button>
+          </div>
+
+          <div class="lab-stage lab-stage--column">
+            <div class="stage-art stage-art--arch">
+              <svg viewBox="0 0 480 480" role="img" aria-label="Animated comparison of traction motor architectures">
+                <defs>
+                  <marker id="pmsmArrow2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#d58a18"></path></marker>
+                </defs>
+                <circle cx="240" cy="240" r="212" fill="#eee9e2" stroke="#403b37" stroke-width="4"></circle>
+                <circle cx="240" cy="240" r="146" fill="#fffdf9" stroke="#8d867e" stroke-width="2"></circle>
+                <g>
+                  <rect data-arch-coil x="216" y="44" width="48" height="56" rx="9" fill="#d88928" stroke="#925713" stroke-width="2" transform="rotate(0 240 240)"></rect>
+                  <rect data-arch-coil x="216" y="44" width="48" height="56" rx="9" fill="#d88928" stroke="#925713" stroke-width="2" transform="rotate(60 240 240)"></rect>
+                  <rect data-arch-coil x="216" y="44" width="48" height="56" rx="9" fill="#d88928" stroke="#925713" stroke-width="2" transform="rotate(120 240 240)"></rect>
+                  <rect data-arch-coil x="216" y="44" width="48" height="56" rx="9" fill="#d88928" stroke="#925713" stroke-width="2" transform="rotate(180 240 240)"></rect>
+                  <rect data-arch-coil x="216" y="44" width="48" height="56" rx="9" fill="#d88928" stroke="#925713" stroke-width="2" transform="rotate(240 240 240)"></rect>
+                  <rect data-arch-coil x="216" y="44" width="48" height="56" rx="9" fill="#d88928" stroke="#925713" stroke-width="2" transform="rotate(300 240 240)"></rect>
                 </g>
-                <g class="loss-rotor-option" data-loss-rotor="wound" fill="none">
-                  <path d="M289 232C252 264 252 336 289 368M411 232C448 264 448 336 411 368" stroke="#b96619" stroke-width="19"/>
-                  <path d="M318 219V381M382 219V381" stroke="#6f0d43" stroke-width="11"/>
+                <g data-arch-pole transform="rotate(0 240 240)">
+                  <line x1="80" y1="240" x2="400" y2="240" stroke="#d58a18" stroke-width="5" marker-end="url(#pmsmArrow2)" opacity=".9"></line>
                 </g>
-                <g class="loss-rotor-option" data-loss-rotor="induction">
-                  <circle cx="350" cy="300" r="103" fill="none" stroke="#a86a23" stroke-width="10"/>
-                  <g fill="#b96619">
-                    <circle cx="350" cy="207" r="8"/><circle cx="397" cy="220" r="8"/><circle cx="430" cy="253" r="8"/>
-                    <circle cx="443" cy="300" r="8"/><circle cx="430" cy="347" r="8"/><circle cx="397" cy="380" r="8"/>
-                    <circle cx="350" cy="393" r="8"/><circle cx="303" cy="380" r="8"/><circle cx="270" cy="347" r="8"/>
-                    <circle cx="257" cy="300" r="8"/><circle cx="270" cy="253" r="8"/><circle cx="303" cy="220" r="8"/>
+
+                <g class="fade-200" data-arch-rotor="pmsm" opacity="1" transform="rotate(0 240 240)">
+                  <circle cx="240" cy="240" r="118" fill="#d6d0c8" stroke="#45403c" stroke-width="4"></circle>
+                  <path d="M240 240L240 136A104 104 0 0 0 136 240Z" fill="#620d3c"></path>
+                  <path d="M240 240L344 240A104 104 0 0 0 240 136Z" fill="#e09a27"></path>
+                  <path d="M240 240L136 240A104 104 0 0 0 240 344Z" fill="#e09a27"></path>
+                  <path d="M240 240L240 344A104 104 0 0 0 344 240Z" fill="#620d3c"></path>
+                  <circle cx="240" cy="240" r="38" fill="#fffdf9" stroke="#5c5752" stroke-width="4"></circle>
+                </g>
+
+                <g class="fade-200" data-arch-rotor="wound" opacity="0" transform="rotate(0 240 240)">
+                  <circle cx="240" cy="240" r="118" fill="#d6d0c8" stroke="#45403c" stroke-width="4"></circle>
+                  <path d="M178 168C138 202 138 278 178 312M302 168C342 202 342 278 302 312" fill="none" stroke="#b96619" stroke-width="20"></path>
+                  <path d="M202 152V328M278 152V328" fill="none" stroke="#620d3c" stroke-width="12"></path>
+                  <circle cx="240" cy="240" r="38" fill="#fffdf9" stroke="#5c5752" stroke-width="4"></circle>
+                  <g data-wound-current fill="#f1a222">
+                    <circle cx="178" cy="190" r="7"></circle><circle cx="302" cy="290" r="7"></circle>
                   </g>
                 </g>
-                <g class="loss-rotor-option" data-loss-rotor="synrm" fill="none" stroke="#fffdf9" stroke-width="14" stroke-linecap="round">
-                  <path d="M286 246C320 265 380 265 414 246"/>
-                  <path d="M273 280C316 302 384 302 427 280"/>
-                  <path d="M273 320C316 298 384 298 427 320"/>
-                  <path d="M286 354C320 335 380 335 414 354"/>
-                </g>
-                <g class="loss-rotor-option" data-loss-rotor="srm">
-                  <path d="M310 190H390V260H460V340H390V410H310V340H240V260H310Z" fill="#aaa39b" stroke="#47423e" stroke-width="4"/>
-                </g>
-                <circle cx="350" cy="300" r="42" fill="#fff" stroke="#5b5651" stroke-width="5"/>
-              </g>
-              <g class="heat heat-steel" aria-hidden="true"><circle cx="350" cy="300" r="207"/></g>
-              <g class="heat heat-copper" aria-hidden="true">
-                <circle cx="350" cy="106" r="46"/><circle cx="350" cy="494" r="46"/>
-                <circle cx="520" cy="200" r="46"/><circle cx="180" cy="400" r="46"/>
-                <circle cx="520" cy="400" r="46"/><circle cx="180" cy="200" r="46"/>
-              </g>
-              <g class="heat heat-rotor" aria-hidden="true"><circle cx="350" cy="300" r="124"/></g>
-              <g class="rotation-indicator" aria-hidden="true">
-                <path d="M258 124A206 206 0 0 1 476 136" fill="none"/>
-                <path d="M481 136l-19-19 29 4z"/>
-              </g>
-              <text x="350" y="570" text-anchor="middle" id="lossMotionLabel">High current, low electrical frequency</text>
-            </g>
-            <g class="loss-hardware" id="lossHardware">
-              <rect x="620" y="230" width="100" height="140" rx="16"/>
-              <path d="M640 280q15-30 30 0t30 0" fill="none"/>
-              <text x="670" y="396" text-anchor="middle">FIELD</text>
-              <text x="670" y="414" text-anchor="middle">HARDWARE</text>
-              <g class="heat heat-hardware" aria-hidden="true"><rect x="620" y="230" width="100" height="140" rx="16"/></g>
-            </g>
-          </svg>
-        </div>
 
-        <div class="loss-controls">
-          <label class="select-control">
-            <span>Motor architecture</span>
-            <select id="lossArchitecture">
-              <option value="pmsm">PMSM</option>
-              <option value="wound">Wound field</option>
-              <option value="induction">Induction</option>
-              <option value="synrm">Synchronous reluctance</option>
-              <option value="srm">Switched reluctance</option>
-            </select>
-          </label>
-          <label class="range-control">
-            <span>Motor speed <output id="lossSpeedOutput">1,600 rpm</output></span>
-            <input id="lossSpeed" type="range" min="0" max="100" value="20" step="1">
-          </label>
-          <label class="range-control">
-            <span>Torque demand <output id="lossTorqueOutput">82%</output></span>
-            <input id="lossTorque" type="range" min="0" max="100" value="82" step="1">
-          </label>
-          <div class="loss-ledger" aria-live="polite">
-            <div><span>Stator copper</span><strong id="copperHeat">High</strong></div>
-            <div><span>Electrical steel</span><strong id="ironHeat">Low</strong></div>
-            <div><span>Rotor</span><strong id="rotorHeat">Low</strong></div>
-            <div><span>Field hardware</span><strong id="hardwareHeat">None</strong></div>
-          </div>
-          <div class="dominant-loss">
-            <span>What this operating point means</span>
-            <p id="lossConcern">High torque requires high stator current. Copper heating is the main concern during a hard launch.</p>
-          </div>
-          <details class="mini-map-details">
-            <summary>Locate this point on a speed and torque map</summary>
-            <div class="mini-map" id="miniMap" aria-label="Illustrative speed and torque map">
-              <span class="map-y-top">High torque</span>
-              <span class="map-y-bottom">Low torque</span>
-              <span class="map-x-left">Low speed</span>
-              <span class="map-x-right">High speed</span>
-              <i id="mapMarker"></i>
+                <g class="fade-200" data-arch-rotor="induction" opacity="0" transform="rotate(0 240 240)">
+                  <circle cx="240" cy="240" r="118" fill="#bbb4ab" stroke="#45403c" stroke-width="4"></circle>
+                  <circle cx="240" cy="240" r="94" fill="#e3ddd5" stroke="#8b5a20" stroke-width="10"></circle>
+                  <g fill="#b96619">
+                    <circle cx="240" cy="146" r="8"></circle><circle cx="287" cy="159" r="8"></circle><circle cx="321" cy="193" r="8"></circle>
+                    <circle cx="334" cy="240" r="8"></circle><circle cx="321" cy="287" r="8"></circle><circle cx="287" cy="321" r="8"></circle>
+                    <circle cx="240" cy="334" r="8"></circle><circle cx="193" cy="321" r="8"></circle><circle cx="159" cy="287" r="8"></circle>
+                    <circle cx="146" cy="240" r="8"></circle><circle cx="159" cy="193" r="8"></circle><circle cx="193" cy="159" r="8"></circle>
+                  </g>
+                  <circle cx="240" cy="240" r="38" fill="#fffdf9" stroke="#5c5752" stroke-width="4"></circle>
+                  <g data-induced-current fill="none" stroke="#f1a222" stroke-width="4">
+                    <circle cx="240" cy="146" r="13"></circle><circle cx="321" cy="287" r="13"></circle><circle cx="159" cy="287" r="13"></circle>
+                  </g>
+                </g>
+
+                <g class="fade-200" data-arch-rotor="synrm" opacity="0" transform="rotate(0 240 240)">
+                  <circle cx="240" cy="240" r="118" fill="#d2ccc4" stroke="#45403c" stroke-width="4"></circle>
+                  <g fill="none" stroke="#fffdf9" stroke-width="17" stroke-linecap="round">
+                    <path d="M172 180C206 200 274 200 308 180"></path>
+                    <path d="M158 214C202 234 278 234 322 214"></path>
+                    <path d="M158 266C202 246 278 246 322 266"></path>
+                    <path d="M172 300C206 280 274 280 308 300"></path>
+                  </g>
+                  <circle cx="240" cy="240" r="38" fill="#fffdf9" stroke="#5c5752" stroke-width="4"></circle>
+                  <g fill="none" stroke="#70a3a2" stroke-width="4" opacity=".85">
+                    <path d="M132 240C176 208 304 208 348 240"></path>
+                    <path d="M132 240C176 272 304 272 348 240"></path>
+                  </g>
+                </g>
+
+                <g class="fade-200" data-arch-rotor="srm" opacity="0" transform="rotate(0 240 240)">
+                  <path d="M196 128H284V196H352V284H284V352H196V284H128V196H196Z" fill="#aaa39b" stroke="#45403c" stroke-width="4"></path>
+                  <circle cx="240" cy="240" r="38" fill="#fffdf9" stroke="#5c5752" stroke-width="4"></circle>
+                </g>
+              </svg>
             </div>
-          </details>
-          <p class="model-note">This is a causal teaching model, not product test data. Architecture comparisons require measured efficiency maps, continuous ratings, coolant conditions and a stated test method.</p>
+            <div class="metric-strip">
+              <div>
+                <p class="metric-label">Stator field</p>
+                <div class="metric-rail"><i data-rail="field" style="background:#d58a18"></i></div>
+              </div>
+              <div>
+                <p class="metric-label">Rotor</p>
+                <div class="metric-rail"><i data-rail="rotor" style="background:#620d3c"></i></div>
+              </div>
+              <div>
+                <p class="metric-label metric-label--tight">Relation</p>
+                <strong class="metric-value" data-arch-relation>Same speed</strong>
+              </div>
+            </div>
+          </div>
+
+          <article class="lab-rail lab-rail--card" tabindex="0" aria-live="polite">
+            <p class="rail-kicker rail-kicker--maroon" data-arch-kicker>Reference architecture</p>
+            <h3 class="rail-title rail-title--lg" data-arch-name>Permanent-magnet synchronous motor</h3>
+            <p class="rail-body" data-arch-desc>The rotor contains permanent magnetic poles. The rotating stator field pulls those poles around at exactly the same speed. Because the rotor needs no electrical connection and produces little electrical loss, the machine can be compact and efficient.</p>
+            <div class="rail-facts">
+              <div class="rail-fact">
+                <p class="fact-label">What replaces the rare-earth magnet</p>
+                <p class="fact-body" data-arch-replacement>Nothing in the reference machine. NdFeB magnets create the rotor field.</p>
+              </div>
+              <div class="rail-fact">
+                <p class="fact-label">Where added heat appears</p>
+                <p class="fact-body" data-arch-heat>Mostly in stator copper and steel. Field weakening can add stator current at high speed.</p>
+              </div>
+              <div class="rail-fact">
+                <p class="fact-label">What has been demonstrated</p>
+                <p class="fact-body" data-arch-evidence>Broad use in current electric vehicles.</p>
+              </div>
+            </div>
+            <div class="note note--gap">
+              <p class="note-kicker">Watch the model</p>
+              <p class="note-body" data-arch-watch>The permanent poles rotate in step with the stator field. The small angular separation represents load.</p>
+            </div>
+          </article>
+
+          <div class="lab-note">Illustrative motion · one shared stator, five rotors at equal outer size</div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap materials-grid">
+      <div>
+        <p class="section-kicker">Magnet materials</p>
+        <h2 class="section-h2 section-h2--minor2">A weaker or emerging magnet can preserve the PMSM principle</h2>
+        <p class="materials-body">Ferrite magnets contain no rare earths and are already made at large scale. Their lower magnetic energy usually requires more magnet material, stronger flux concentration, a larger motor, or some combination of these changes. Iron-nitride magnets may eventually offer stronger performance without rare earths, but a useful traction magnet must meet several requirements at once: magnetic strength, coercivity, temperature stability, repeatable manufacture and cost.</p>
+        <p class="materials-body last">Axial flux does not constitute a separate magnet material. It is a machine geometry that can help an engineer use space and active material differently. It can still use NdFeB, ferrite or another magnet.</p>
+      </div>
+      <div class="materials-table">
+        <div class="materials-head">
+          <span>Material</span><span>What it changes</span><span>Status</span>
+        </div>
+        <div class="materials-row">
+          <strong>NdFeB</strong>
+          <p>High magnetic energy supports compact rotors and high torque density.</p>
+          <span class="pill pill--maroon">Mass production</span>
+        </div>
+        <div class="materials-row">
+          <strong>Ferrite</strong>
+          <p>Lower strength shifts the design towards more volume, flux concentration or lower output.</p>
+          <span class="pill pill--gold">Mature material</span>
+        </div>
+        <div class="materials-row">
+          <strong>Iron nitride</strong>
+          <p>Promising laboratory properties still need repeatable magnets and automotive qualification.</p>
+          <span class="pill pill--grey">Scale-up<sup class="fn-sm"><a href="#source-10">10</a></sup></span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="evidence-section" id="evidence" aria-labelledby="evidence-title">
-      <div class="reading-column">
-        <p class="eyebrow">Commercial status</p>
-        <h2 id="evidence-title">Commercial evidence should be read in discrete steps</h2>
-        <p>A production vehicle, an industrial product, a vehicle pilot and a material-scale demonstration answer different questions. The evidence board below records what has been demonstrated publicly. It does not turn company announcements into independent performance results.</p>
-      </div>
-      <div class="evidence-board shell">
-        <article class="evidence-band">
-          <div class="evidence-level"><i></i><span>Current vehicle production</span></div>
-          <div class="evidence-items">
-            <p><strong>Wound field</strong> Renault and BMW use electrically excited synchronous motors in production vehicles.<sup><a href="#source-3">3</a></sup><sup><a href="#source-4">4</a></sup></p>
-            <p><strong>Induction</strong> Induction machines are used in production EVs, including specified Tesla variants.<sup><a href="#source-5">5</a></sup></p>
-          </div>
-        </article>
-        <article class="evidence-band">
-          <div class="evidence-level"><i></i><span>Commercial industrial use</span></div>
-          <div class="evidence-items">
-            <p><strong>Synchronous reluctance</strong> ABB and other suppliers sell complete industrial motor and drive systems.<sup><a href="#source-6">6</a></sup> Industrial use does not by itself establish traction performance at high speed.</p>
-          </div>
-        </article>
-        <article class="evidence-band">
-          <div class="evidence-level"><i></i><span>Announced programme or pilot</span></div>
-          <div class="evidence-items">
-            <p><strong>Wound field</strong> Renault and Valeo’s E7A programme and ZF’s contactless I²SM are announced developments.<sup><a href="#source-3">3</a></sup><sup><a href="#source-7">7</a></sup></p>
-            <p><strong>SRM and ferrite PM</strong> AEM and Conifer publish development claims. Vehicle-level validation remains limited in public sources.<sup><a href="#source-8">8</a></sup><sup><a href="#source-9">9</a></sup></p>
-          </div>
-        </article>
-        <article class="evidence-band">
-          <div class="evidence-level"><i></i><span>Material scale-up</span></div>
-          <div class="evidence-items">
-            <p><strong>Iron nitride</strong> Niron is expanding manufacturing capacity. Public evidence does not yet establish high-volume automotive qualification.<sup><a href="#source-10">10</a></sup></p>
-          </div>
-        </article>
-      </div>
-    </section>
+  <section id="efficiency" class="section section--band">
+    <div class="prose">
+      <p class="section-kicker">Operating efficiency · L.04</p>
+      <h2 class="section-h2">Motor losses depend on speed and torque demand</h2>
+      <p class="section-body">Motor efficiency is the share of electrical input that reaches the shaft as mechanical output. The remainder becomes heat, sound and mechanical friction. A quoted peak efficiency describes one favourable operating point. A vehicle repeatedly moves through low speed, high torque, steady cruise, high speed and regenerative braking, so engineers study an efficiency map and the expected drive cycle.</p>
+      <p class="section-body last">Torque usually requires current. Heating in copper rises roughly with the square of current, so a hard launch or a long climb can warm the stator quickly. High speed raises electrical frequency and therefore iron loss. An induction rotor adds heat because current flows through its cage. A wound-field rotor adds excitation loss. A PMSM may need extra stator current to weaken its effective field at high speed.</p>
+    </div>
 
-    <section class="application-section" aria-labelledby="application-title">
-      <div class="shell application-layout">
-        <div class="application-copy">
-          <p class="eyebrow">Where each route may fit</p>
-          <h2 id="application-title">Application requirements determine which architectures merit testing</h2>
-          <p>Choose an application to change the engineering question. The result is a shortlist for testing, not a ranking.</p>
-          <div class="application-tabs" role="tablist" aria-label="Application">
-            <button role="tab" aria-selected="true" data-application="twoWheeler">Two- and three-wheelers</button>
-            <button role="tab" aria-selected="false" data-application="passenger">Passenger cars</button>
-            <button role="tab" aria-selected="false" data-application="heavy">Heavy vehicles</button>
-            <button role="tab" aria-selected="false" data-application="industrial">Industrial drives</button>
+    <div class="wrap lab-wrap">
+      <figure class="lab" id="lab-loss">
+        <div class="lab-grid">
+          <div class="lab-tabs lab-tabs--4">
+            <button class="lab-tab lab-tab--duty is-current" type="button" data-duty="launch"><span class="duty-name">Pulling away</span><small>Low speed, high torque</small></button>
+            <button class="lab-tab lab-tab--duty" type="button" data-duty="cruise"><span class="duty-name">Steady cruise</span><small>Medium speed, low torque</small></button>
+            <button class="lab-tab lab-tab--duty" type="button" data-duty="motorway"><span class="duty-name">Motorway</span><small>High speed, low torque</small></button>
+            <button class="lab-tab lab-tab--duty" type="button" data-duty="grade"><span class="duty-name">Long climb</span><small>Medium speed, high torque</small></button>
           </div>
+          <div class="lab-status lab-status--tall">Heat view ·&nbsp;<span data-duty-label>Pulling away</span></div>
+
+          <div class="lab-stage lab-stage--column">
+            <div class="stage-art stage-art--loss">
+              <svg viewBox="0 0 480 480" role="img" aria-label="Where an electric motor produces heat">
+                <defs>
+                  <filter id="pmsmHeat" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="16"></feGaussianBlur></filter>
+                  <clipPath id="pmsmHousing"><circle cx="240" cy="240" r="210"></circle></clipPath>
+                </defs>
+                <circle cx="240" cy="240" r="212" fill="#ede8e1" stroke="#403b37" stroke-width="4"></circle>
+                <circle cx="240" cy="240" r="146" fill="#fffdf9" stroke="#8b847c" stroke-width="2"></circle>
+                <g clip-path="url(#pmsmHousing)">
+                  <g class="heat" data-heat="iron" filter="url(#pmsmHeat)"><circle cx="240" cy="240" r="180" fill="none" stroke="#e5873b" stroke-width="26"></circle></g>
+                  <g class="heat" data-heat="copper" filter="url(#pmsmHeat)" fill="#d54e2e">
+                    <circle cx="240" cy="72" r="40"></circle><circle cx="240" cy="408" r="40"></circle>
+                    <circle cx="385" cy="156" r="40"></circle><circle cx="95" cy="324" r="40"></circle>
+                    <circle cx="385" cy="324" r="40"></circle><circle cx="95" cy="156" r="40"></circle>
+                  </g>
+                  <g class="heat" data-heat="rotor" filter="url(#pmsmHeat)"><circle cx="240" cy="240" r="110" fill="#d54e2e"></circle></g>
+                </g>
+                <g fill="#c6771d" stroke="#894d0e" stroke-width="2">
+                  <rect x="216" y="44" width="48" height="56" rx="9" transform="rotate(0 240 240)"></rect>
+                  <rect x="216" y="44" width="48" height="56" rx="9" transform="rotate(60 240 240)"></rect>
+                  <rect x="216" y="44" width="48" height="56" rx="9" transform="rotate(120 240 240)"></rect>
+                  <rect x="216" y="44" width="48" height="56" rx="9" transform="rotate(180 240 240)"></rect>
+                  <rect x="216" y="44" width="48" height="56" rx="9" transform="rotate(240 240 240)"></rect>
+                  <rect x="216" y="44" width="48" height="56" rx="9" transform="rotate(300 240 240)"></rect>
+                </g>
+                <circle cx="240" cy="240" r="118" fill="#d1cbc3" stroke="#47423e" stroke-width="4"></circle>
+                <g class="fade-180" data-loss-rotor="pmsm" opacity="1">
+                  <path d="M144 240A96 96 0 0 1 336 240Z" fill="#620d3c"></path>
+                  <path d="M144 240A96 96 0 0 0 336 240Z" fill="#e09a27"></path>
+                </g>
+                <g class="fade-180" data-loss-rotor="wound" opacity="0" fill="none">
+                  <path d="M184 172C148 204 148 276 184 308M296 172C332 204 332 276 296 308" stroke="#b96619" stroke-width="17"></path>
+                  <path d="M208 158V322M272 158V322" stroke="#620d3c" stroke-width="10"></path>
+                </g>
+                <g class="fade-180" data-loss-rotor="induction" opacity="0">
+                  <circle cx="240" cy="240" r="92" fill="none" stroke="#a86a23" stroke-width="9"></circle>
+                  <g fill="#b96619">
+                    <circle cx="240" cy="156" r="7"></circle><circle cx="282" cy="168" r="7"></circle><circle cx="312" cy="198" r="7"></circle>
+                    <circle cx="324" cy="240" r="7"></circle><circle cx="312" cy="282" r="7"></circle><circle cx="282" cy="312" r="7"></circle>
+                    <circle cx="240" cy="324" r="7"></circle><circle cx="198" cy="312" r="7"></circle><circle cx="168" cy="282" r="7"></circle>
+                    <circle cx="156" cy="240" r="7"></circle><circle cx="168" cy="198" r="7"></circle><circle cx="198" cy="168" r="7"></circle>
+                  </g>
+                </g>
+                <g class="fade-180" data-loss-rotor="synrm" opacity="0" fill="none" stroke="#fffdf9" stroke-width="13" stroke-linecap="round">
+                  <path d="M176 186C208 204 272 204 304 186"></path>
+                  <path d="M164 216C204 236 276 236 316 216"></path>
+                  <path d="M164 264C204 244 276 244 316 264"></path>
+                  <path d="M176 294C208 276 272 276 304 294"></path>
+                </g>
+                <g class="fade-180" data-loss-rotor="srm" opacity="0">
+                  <path d="M200 136H280V200H344V280H280V344H200V280H136V200H200Z" fill="#aaa39b" stroke="#47423e" stroke-width="4"></path>
+                </g>
+                <circle cx="240" cy="240" r="36" fill="#fffdf9" stroke="#5b5651" stroke-width="4"></circle>
+                <path d="M148 96A198 198 0 0 1 344 108" fill="none" stroke="#620d3c" stroke-width="4"></path>
+                <path d="M350 108l-19-18 28 3z" fill="#620d3c"></path>
+              </svg>
+            </div>
+            <div class="lab-legend lab-legend--single" data-motion-label>Low electrical frequency, high current demand</div>
+          </div>
+
+          <div class="lab-rail lab-rail--card">
+            <label class="ctl ctl--first">
+              <span class="ctl-label ctl-label--block">Motor architecture</span>
+              <select data-loss-key>
+                <option value="pmsm">PMSM</option>
+                <option value="wound">Wound field</option>
+                <option value="induction">Induction</option>
+                <option value="synrm">Synchronous reluctance</option>
+                <option value="srm">Switched reluctance</option>
+              </select>
+            </label>
+            <label class="ctl">
+              <span class="ctl-label">Motor speed <output data-speed-out>1,600 rpm</output></span>
+              <input data-speed-range type="range" min="0" max="100" step="1" value="20">
+            </label>
+            <label class="ctl ctl--tight">
+              <span class="ctl-label">Torque demand <output data-torque-out>82%</output></span>
+              <input data-torque-range type="range" min="0" max="100" step="1" value="82">
+            </label>
+
+            <div class="ledger" aria-live="polite">
+              <div class="ledger-row">
+                <i style="background:#d54e2e"></i>
+                <span>Stator copper</span>
+                <strong data-band="copper">High</strong>
+              </div>
+              <div class="ledger-row">
+                <i style="background:#e5873b"></i>
+                <span>Electrical steel</span>
+                <strong data-band="iron">Low</strong>
+              </div>
+              <div class="ledger-row">
+                <i style="background:#d54e2e"></i>
+                <span>Rotor</span>
+                <strong data-band="rotor">Low</strong>
+              </div>
+              <div class="ledger-row">
+                <i style="background:#c9c0b5"></i>
+                <span>Field hardware</span>
+                <strong data-band="hardware">None</strong>
+              </div>
+            </div>
+
+            <div class="opmap">
+              <p class="rail-kicker rail-kicker--sm">Operating point</p>
+              <svg viewBox="0 0 200 130" aria-label="Illustrative speed and torque map">
+                <rect x="26" y="6" width="168" height="102" fill="#fbf8f2" stroke="#ded6cc" stroke-width="1"></rect>
+                <line x1="110" y1="6" x2="110" y2="108" stroke="#e6e0d8" stroke-width="1"></line>
+                <line x1="26" y1="57" x2="194" y2="57" stroke="#e6e0d8" stroke-width="1"></line>
+                <circle data-map-marker cx="59.6" cy="24.4" r="5.5" fill="#620d3c" stroke="#fffdf9" stroke-width="2"></circle>
+                <text x="26" y="122" fill="#777069" class="svg-axis">LOW SPEED</text>
+                <text x="194" y="122" text-anchor="end" fill="#777069" class="svg-axis">HIGH SPEED</text>
+                <text x="20" y="12" text-anchor="end" fill="#777069" class="svg-axis">HI</text>
+                <text x="20" y="106" text-anchor="end" fill="#777069" class="svg-axis">LO</text>
+              </svg>
+            </div>
+
+            <div class="note note--tight">
+              <p class="note-kicker">What this operating point means</p>
+              <p class="note-body" data-concern>High torque requires high stator current. Copper heating is the main concern during a hard launch.</p>
+            </div>
+          </div>
+
+          <div class="lab-note lab-note--wrap">Causal teaching model, not product test data · comparisons require measured efficiency maps, continuous ratings and a stated test method</div>
         </div>
-        <div class="application-panel" id="applicationPanel" role="tabpanel" tabindex="0" aria-live="polite">
-          <div>
-            <span>Requirements that carry the most weight</span>
-            <p id="applicationRequirements">Low cost, compact packaging, frequent stop-start operation and straightforward service.</p>
+      </figure>
+    </div>
+  </section>
+
+  <section id="evidence" class="section section--card">
+    <div class="prose">
+      <p class="section-kicker">Commercial status</p>
+      <h2 class="section-h2">Commercial evidence should be read in discrete steps</h2>
+      <p class="section-body last">A production vehicle, an industrial product, a vehicle pilot and a material-scale demonstration answer different questions. The board below records what has been demonstrated publicly. It does not turn company announcements into independent performance results.</p>
+    </div>
+    <div class="wrap block-wrap">
+      <div class="evidence-board">
+        <article class="evidence-row">
+          <div class="evidence-head">
+            <i class="dot dot--maroon"></i>
+            <div>
+              <p class="evidence-id">V.01</p>
+              <span class="evidence-name">Current vehicle production</span>
+            </div>
           </div>
           <div>
-            <span>Routes worth testing</span>
-            <p id="applicationRoutes">Ferrite PM, switched reluctance and synchronous reluctance can be relevant when material security and cost matter more than passenger-car refinement.</p>
+            <p class="evidence-body"><strong>Wound field</strong> Renault and BMW use electrically excited synchronous motors in production vehicles.<sup class="fn"><a href="#source-3">3</a></sup><sup class="fn"><a href="#source-4">4</a></sup></p>
+            <p class="evidence-body last"><strong>Induction</strong> Induction machines are used in production EVs, including specified Tesla variants.<sup class="fn"><a href="#source-5">5</a></sup></p>
+          </div>
+        </article>
+        <article class="evidence-row">
+          <div class="evidence-head">
+            <i class="dot dot--gold"></i>
+            <div>
+              <p class="evidence-id">V.02</p>
+              <span class="evidence-name">Commercial industrial use</span>
+            </div>
           </div>
           <div>
-            <span>Evidence a buyer should request</span>
-            <p id="applicationEvidence">Drive-cycle efficiency, low-speed torque, controller cost, noise, vibration and thermal limits in Indian ambient conditions.</p>
+            <p class="evidence-body last"><strong>Synchronous reluctance</strong> ABB and other suppliers sell complete industrial motor and drive systems.<sup class="fn"><a href="#source-6">6</a></sup> Industrial use does not by itself establish traction performance at high speed.</p>
           </div>
+        </article>
+        <article class="evidence-row">
+          <div class="evidence-head">
+            <i class="dot dot--teal"></i>
+            <div>
+              <p class="evidence-id">V.03</p>
+              <span class="evidence-name">Announced programme or pilot</span>
+            </div>
+          </div>
+          <div>
+            <p class="evidence-body"><strong>Wound field</strong> Renault and Valeo's E7A programme and ZF's contactless I²SM are announced developments.<sup class="fn"><a href="#source-3">3</a></sup><sup class="fn"><a href="#source-7">7</a></sup></p>
+            <p class="evidence-body last"><strong>SRM and ferrite PM</strong> AEM and Conifer publish development claims. Vehicle-level validation remains limited in public sources.<sup class="fn"><a href="#source-8">8</a></sup><sup class="fn"><a href="#source-9">9</a></sup></p>
+          </div>
+        </article>
+        <article class="evidence-row">
+          <div class="evidence-head">
+            <i class="dot dot--hollow"></i>
+            <div>
+              <p class="evidence-id">V.04</p>
+              <span class="evidence-name">Material scale-up</span>
+            </div>
+          </div>
+          <div>
+            <p class="evidence-body last"><strong>Iron nitride</strong> Niron is expanding manufacturing capacity. Public evidence does not yet establish high-volume automotive qualification.<sup class="fn"><a href="#source-10">10</a></sup></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--apps">
+    <div class="wrap apps-grid">
+      <div>
+        <p class="section-kicker section-kicker--gold">Where each route may fit · L.05</p>
+        <h2 class="section-h2 section-h2--dark section-h2--minor2">Application requirements determine which architectures merit testing</h2>
+        <p class="dark-body dark-body--intro">Choose an application to change the engineering question. The result is a shortlist for testing, not a ranking.</p>
+        <div class="app-tabs" role="tablist" aria-label="Application">
+          <button class="app-tab is-current" type="button" role="tab" data-app="twoWheeler">Two- and three-wheelers</button>
+          <button class="app-tab" type="button" role="tab" data-app="passenger">Passenger cars</button>
+          <button class="app-tab" type="button" role="tab" data-app="heavy">Heavy vehicles</button>
+          <button class="app-tab" type="button" role="tab" data-app="industrial">Industrial drives</button>
         </div>
       </div>
-    </section>
-
-    <section class="india-section" id="india" aria-labelledby="india-title">
-      <div class="reading-column">
-        <p class="eyebrow">Implications for India</p>
-        <h2 id="india-title">The policy task is to build evidence and manufacturing capability around several routes</h2>
-        <p>India treats traction motors and inverters as domestic manufacturing items in electric-vehicle support programmes.<sup><a href="#source-11">11</a></sup> ARAI lists motor test beds up to 220 kW and provides motor and controller characterisation.<sup><a href="#source-12">12</a></sup> These capabilities can support a more discriminating approach to rare-earth reduction.</p>
+      <div class="app-panel" role="tabpanel" tabindex="0" aria-live="polite">
+        <div class="app-row">
+          <span class="app-label">Requirements that carry the most weight</span>
+          <p data-app-requirements>Low cost, compact packaging, frequent stop-start operation and straightforward service.</p>
+        </div>
+        <div class="app-row">
+          <span class="app-label">Routes worth testing</span>
+          <p data-app-routes>Ferrite PM, switched reluctance and synchronous reluctance can be relevant when material security and cost matter more than passenger-car refinement.</p>
+        </div>
+        <div class="app-row">
+          <span class="app-label">Evidence a buyer should request</span>
+          <p data-app-evidence>Drive-cycle efficiency, low-speed torque, controller cost, noise, vibration and thermal limits in Indian ambient conditions.</p>
+        </div>
       </div>
-      <div class="policy-grid shell">
-        <article>
-          <span>Testing</span>
+    </div>
+  </section>
+
+  <section id="india" class="section section--paper">
+    <div class="prose">
+      <p class="section-kicker">Implications for India</p>
+      <h2 class="section-h2">The policy task is to build evidence and manufacturing capability around several routes</h2>
+      <p class="section-body last">India treats traction motors and inverters as domestic manufacturing items in electric-vehicle support programmes.<sup class="fn"><a href="#source-11">11</a></sup> ARAI lists motor test beds up to 220 kW and provides motor and controller characterisation.<sup class="fn"><a href="#source-12">12</a></sup> These capabilities can support a more discriminating approach to rare-earth reduction.</p>
+    </div>
+    <div class="wrap block-wrap">
+      <div class="india-grid">
+        <article class="india-cell">
+          <p class="india-label">P.01 · Testing</p>
           <h3>Publish comparable motor evidence</h3>
           <p>Publicly supported programmes should report efficiency maps, continuous ratings, thermal limits, acoustic behaviour and complete test conditions. Peak power and peak efficiency do not describe a working drive system.</p>
         </article>
-        <article>
-          <span>Manufacturing</span>
+        <article class="india-cell">
+          <p class="india-label">P.02 · Manufacturing</p>
           <h3>Support the parts behind the motor label</h3>
           <p>Domestic capability includes electrical steel, precision laminations, winding processes, rotor balancing, bearings, inverters, control software and cooling hardware.</p>
         </article>
-        <article>
-          <span>Market entry</span>
+        <article class="india-cell">
+          <p class="india-label">P.03 · Market entry</p>
           <h3>Match the route to a realistic first market</h3>
           <p>Two- and three-wheelers and industrial drives may offer earlier opportunities for ferrite and reluctance designs than high-performance passenger cars. The test cycle should match the application.</p>
         </article>
-        <article>
-          <span>Support</span>
+        <article class="india-cell">
+          <p class="india-label">P.04 · Support</p>
           <h3>Release funding against evidence milestones</h3>
           <p>Laboratory hardware, a vehicle pilot, an announced programme and series production justify different levels of support. A memorandum does not establish manufacturing readiness.</p>
         </article>
-        <article>
-          <span>Supply</span>
+        <article class="india-cell">
+          <p class="india-label">P.05 · Supply</p>
           <h3>Keep parallel strategies open</h3>
           <p>Motor substitution should proceed alongside lower-magnet designs, recycling and diversified refining and magnet manufacture. Each measure addresses a different part of the exposure.</p>
         </article>
+        <article class="india-cell india-cell--band">
+          <p>Five tasks · none of them is a single-route bet</p>
+        </article>
       </div>
-    </section>
-
-    <section class="conclusion-section" aria-labelledby="conclusion-title">
-      <div class="shell conclusion-layout">
-        <span>Conclusion</span>
-        <div>
-          <h2 id="conclusion-title">Several motor architectures are likely to coexist</h2>
-          <p>Wound-field and induction motors provide the strongest current evidence for passenger-vehicle substitution because both are already used in production. Synchronous reluctance has a substantial industrial base, although traction designs face different speed, packaging and acoustic requirements. Ferrite can reduce mineral exposure within a permanent-magnet architecture, with a probable cost in material volume or machine complexity. Iron nitride remains contingent on manufacturing scale-up and qualification.</p>
-          <p>Buyers and policymakers need a tested account of drive-cycle efficiency, continuous output, noise, cooling, control hardware, production status and material exposure. A single peak figure cannot provide that evidence.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="sources-section" id="sources" aria-labelledby="sources-title">
-      <div class="shell sources-layout">
-        <div>
-          <p class="eyebrow">Method</p>
-          <h2 id="sources-title">Sources and evidence</h2>
-          <p>This brief prioritises government publications, manufacturer documentation and product pages. Company-reported performance claims are not treated as independent tests. Commercial status is recorded as current production, industrial use, announced programme or pilot, and material scale-up.</p>
-        </div>
-        <ol class="sources-list">
-          <li id="source-1"><a href="https://www.iea.org/reports/rare-earth-elements/executive-summary" target="_blank" rel="noopener">International Energy Agency, <cite>Rare Earth Elements</cite>, 2025</a></li>
-          <li id="source-2"><a href="https://www.energy.gov/cmei/vehicles/electric-motors-research-and-development" target="_blank" rel="noopener">US Department of Energy, Electric Motors Research and Development</a></li>
-          <li id="source-3"><a href="https://www.renaultgroup.com/en/magazine/energy-and-motorization/all-about-electric-motors-with-no-rare-earths/" target="_blank" rel="noopener">Renault Group, electric motors without rare earths</a></li>
-          <li id="source-4"><a href="https://www.press.bmwgroup.com/canada/article/attachment/T0440602EN/613412" target="_blank" rel="noopener">BMW Group, fifth-generation eDrive technical information</a></li>
-          <li id="source-5"><a href="https://www.tesla.com/ownersmanual/model3/en_gb/GUID-E414862C-CFA1-4A0B-9548-BE21C32CAA58.html" target="_blank" rel="noopener">Tesla Model 3 Owner’s Manual, motor specifications</a></li>
-          <li id="source-6"><a href="https://www.abb.com/global/en/areas/motion/motors-generators/low-voltage-motors/iec-low-voltage-motors/synchronous-reluctance-motors" target="_blank" rel="noopener">ABB, synchronous reluctance motors</a></li>
-          <li id="source-7"><a href="https://www.zf.com/products/de/cars/products_77186.html" target="_blank" rel="noopener">ZF, inductive-excited synchronous motor</a></li>
-          <li id="source-8"><a href="https://advancedelectricmachines.com/ssrd/" target="_blank" rel="noopener">Advanced Electric Machines, switched reluctance drive</a></li>
-          <li id="source-9"><a href="https://conifer.io/" target="_blank" rel="noopener">Conifer, ferrite axial-flux motor</a></li>
-          <li id="source-10"><a href="https://www.nironmagnetics.com/news/niron-magnetics-and-city-of-sartell-advance-next-phase-of-rare-earth-free-permanent-magnet-manufacturing-project" target="_blank" rel="noopener">Niron Magnetics, manufacturing scale-up announcement</a></li>
-          <li id="source-11"><a href="https://www.heavyindustries.gov.in/sites/default/files/2024-03/emps-2024.pdf" target="_blank" rel="noopener">Ministry of Heavy Industries, Electric Mobility Promotion Scheme 2024</a></li>
-          <li id="source-12"><a href="https://www.araiindia.com/centre-of-excellence/centre-of-excellence-green-mobility" target="_blank" rel="noopener">ARAI, Centre of Excellence for Green Mobility</a></li>
-        </ol>
-      </div>
-      <p class="research-date shell">Research current to 27 July 2026.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="socials">
-      <span>Built by <a href="https://takshashila.org.in/content/team/tannmay-kumarr-baid.html" target="_blank" rel="noopener noreferrer" class="credit-link">Tannmay Kumarr Baid</a></span>
-      <a href="https://x.com/tannmaybaid" target="_blank" rel="noopener noreferrer" aria-label="X">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/tannmaykumarrbaid/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-      </a>
-      <a href="https://github.com/tannmay-python/PMSM-alternatives" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-      </a>
     </div>
-  </footer>
+  </section>
+
+  <section class="section section--conclusion">
+    <div class="wrap conclusion-grid">
+      <span class="conclusion-label">Conclusion</span>
+      <div>
+        <h2 class="section-h2 section-h2--minor">Several motor architectures are likely to coexist</h2>
+        <p class="section-body">Wound-field and induction motors provide the strongest current evidence for passenger-vehicle substitution because both are already used in production. Synchronous reluctance has a substantial industrial base, although traction designs face different speed, packaging and acoustic requirements. Ferrite can reduce mineral exposure within a permanent-magnet architecture, with a probable cost in material volume or machine complexity. Iron nitride remains contingent on manufacturing scale-up and qualification.</p>
+        <p class="section-body last">Buyers and policymakers need a tested account of drive-cycle efficiency, continuous output, noise, cooling, control hardware, production status and material exposure. A single peak figure cannot provide that evidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sources" class="section section--sources">
+    <div class="wrap sources-grid">
+      <div>
+        <p class="section-kicker">Method</p>
+        <h2 class="sources-h2">Sources and evidence</h2>
+        <p class="sources-method">This brief prioritises government publications, manufacturer documentation and product pages. Company-reported performance claims are not treated as independent tests. Commercial status is recorded as current production, industrial use, announced programme or pilot, and material scale-up.</p>
+      </div>
+      <ol class="sources-list">
+        <li id="source-1"><span>01</span><a href="https://www.iea.org/reports/rare-earth-elements/executive-summary" target="_blank" rel="noopener">International Energy Agency, <cite>Rare Earth Elements</cite>, 2025</a></li>
+        <li id="source-2"><span>02</span><a href="https://www.energy.gov/cmei/vehicles/electric-motors-research-and-development" target="_blank" rel="noopener">US Department of Energy, Electric Motors Research and Development</a></li>
+        <li id="source-3"><span>03</span><a href="https://www.renaultgroup.com/en/magazine/energy-and-motorization/all-about-electric-motors-with-no-rare-earths/" target="_blank" rel="noopener">Renault Group, electric motors without rare earths</a></li>
+        <li id="source-4"><span>04</span><a href="https://www.press.bmwgroup.com/canada/article/attachment/T0440602EN/613412" target="_blank" rel="noopener">BMW Group, fifth-generation eDrive technical information</a></li>
+        <li id="source-5"><span>05</span><a href="https://www.tesla.com/ownersmanual/model3/en_gb/GUID-E414862C-CFA1-4A0B-9548-BE21C32CAA58.html" target="_blank" rel="noopener">Tesla Model 3 Owner's Manual, motor specifications</a></li>
+        <li id="source-6"><span>06</span><a href="https://www.abb.com/global/en/areas/motion/motors-generators/low-voltage-motors/iec-low-voltage-motors/synchronous-reluctance-motors" target="_blank" rel="noopener">ABB, synchronous reluctance motors</a></li>
+        <li id="source-7"><span>07</span><a href="https://www.zf.com/products/de/cars/products_77186.html" target="_blank" rel="noopener">ZF, inductive-excited synchronous motor</a></li>
+        <li id="source-8"><span>08</span><a href="https://advancedelectricmachines.com/ssrd/" target="_blank" rel="noopener">Advanced Electric Machines, switched reluctance drive</a></li>
+        <li id="source-9"><span>09</span><a href="https://conifer.io/" target="_blank" rel="noopener">Conifer, ferrite axial-flux motor</a></li>
+        <li id="source-10"><span>10</span><a href="https://www.nironmagnetics.com/news/niron-magnetics-and-city-of-sartell-advance-next-phase-of-rare-earth-free-permanent-magnet-manufacturing-project" target="_blank" rel="noopener">Niron Magnetics, manufacturing scale-up announcement</a></li>
+        <li id="source-11"><span>11</span><a href="https://www.heavyindustries.gov.in/sites/default/files/2024-03/emps-2024.pdf" target="_blank" rel="noopener">Ministry of Heavy Industries, Electric Mobility Promotion Scheme 2024</a></li>
+        <li id="source-12"><span>12</span><a href="https://www.araiindia.com/centre-of-excellence/centre-of-excellence-green-mobility" target="_blank" rel="noopener">ARAI, Centre of Excellence for Green Mobility</a></li>
+      </ol>
+    </div>
+    <p class="wrap sources-currency">Research current to 27 July 2026</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>Built by <a href="https://takshashila.org.in/content/team/tannmay-kumarr-baid.html" target="_blank" rel="noopener">Tannmay Kumarr Baid</a></span>
+  <a href="https://x.com/tannmaybaid" target="_blank" rel="noopener" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a>
+  <a href="https://www.linkedin.com/in/tannmaykumarrbaid/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></a>
+  <a href="https://github.com/tannmay-python/PMSM-alternatives" target="_blank" rel="noopener" aria-label="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg></a>
+</footer>
+
 </body>
 </html>
